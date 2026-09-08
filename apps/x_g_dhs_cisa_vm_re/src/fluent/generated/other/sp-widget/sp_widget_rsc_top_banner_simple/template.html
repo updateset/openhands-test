@@ -1,0 +1,135 @@
+<usa-header-extended>
+  <usa-header-extended-logo-wrapper>
+
+    <a href="/rsc" class="flex">
+
+      <!-- CISA Logo -->
+      <usa-header-extended-logo-img src="x_1131290_cisa_irf.logo1.png" width="65px"
+        alt="Cybersecurity & Infrastructure Security Agency">
+      </usa-header-extended-logo-img>
+
+      <!-- RSC Logo -->
+      <usa-header-extended-logo-img class="logo-align" src="x_g_dhs_cisa_vm_re.rsc-logo-transparent.svg" width="200px"
+        height="100%" alt="Ready Set Cyber logo">
+      </usa-header-extended-logo-img>
+
+    </a>
+  </usa-header-extended-logo-wrapper>
+
+  <usa-header-extended-nav>
+    <!-- Search wrapper must come before the menu items -->
+    <usa-header-extended-search-wrapper role="menu">
+      <!-- Login -->
+      <div class="pr-8 pull-right grid-row" ng-if="!c.data.user">
+
+        <!-- OBM Control Number -->
+        <div class="pr-8">
+          <div>
+            <p class="dark-blue mb-0">
+              <strong>OMB Control No.: 1670-0051</strong>
+            </p>
+          </div>
+          <div>
+            <p class="dark-blue mb-9">
+              <strong>Expiration Date 3/31/2027</strong>
+            </p>
+          </div>
+        </div>
+
+        <!-- Login -->
+        <a href="?id=login" class="login" aria-label="Login with Okta or Login.gov">Login</a>
+
+      </div>
+
+      <!-- Avatar Drop Down -->
+      <div class="pr-8 pull-right grid-row" role="presentation" ng-if="c.data.user">
+
+        <!-- OBM Control Number -->
+        <div class="pr-4">
+
+          <div>
+            <p class="dark-blue mb-0">
+              <strong>OMB Control No.: 1670-0051</strong>
+            </p>
+          </div>
+          <div>
+            <p class="dark-blue mb-9">
+              <strong>Expiration Date 3/31/2027</strong>
+            </p>
+          </div>
+
+        </div>
+
+        <!-- My Questionnaires -->
+        <div class="px-4 grid-row">
+
+          <button id="my_questionnaire_btn" class="no-style grid-row" ng-click="c.myQuestionnaires()"
+            aria-label="View my submitted questionnaires">
+            <span class="pt-5 usa-link">My Questionnaires</span>
+            <span class="questionnaire-circle ml-2 mt-4">
+              <div class="questionnaire-text">{{c.data.count}}</div>
+            </span>
+          </button>
+
+        </div>
+
+        <!-- Avatar -->
+        <div class="px-4">
+          <div class="dropdown" usa-focus-out="c.closeOptions()">
+            <button class="no-style dropdown-toggle" type="button" id="userAvatar" aria-haspopup="true"
+              aria-expanded="false" ng-click="c.toggleOptions()">
+              <div class="grid-row">
+                <span class="avatar-circle">
+                  <div class="avatar-circle">{{c.data.userInitials}}</div>
+                </span>
+                <i class="fa fa-angle-down pl-2 pt-5" aria-hidden="true"></i>
+              </div>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userAvatar"
+              ng-class="{'show': c.areOptionsOpen}">
+              <usa-icon-list>
+                <a ng-href="logout.do" title="Logout">
+                  <usa-icon-list-item icon-src="uswds_logout.svg" icon-alt="Logout icon">
+                    Logout
+                  </usa-icon-list-item>
+                </a>
+              </usa-icon-list>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </usa-header-extended-search-wrapper>
+    
+    <!-- Simple link -->
+    <usa-header-extended-nav-parent title="Services" target="_self" link="/services">
+    </usa-header-extended-nav-parent>
+
+    <!-- Normal Menu -->
+    <usa-header-extended-nav-parent title="Report a Cyber Issue">
+      <usa-header-extended-nav-child ng-repeat="item in c.menuOneItems" title="{{item.name}}" target="{{item.target}}"
+        link="{{item.link}}"></usa-header-extended-nav-child>
+    </usa-header-extended-nav-parent>
+
+    <!-- Cyber Hygiene Menu -->
+    <usa-header-extended-nav-parent title="Cyber Services">
+      <usa-header-extended-nav-child ng-repeat="item in c.menuTwoItems" title="{{item.name}}" target="{{item.target}}"
+        link="{{item.link}}"></usa-header-extended-nav-child>
+    </usa-header-extended-nav-parent>
+    
+    <!-- IEP Menu -->
+	<usa-header-extended-nav-parent title="Industry Engagement">
+    	<usa-header-extended-nav-child ng-repeat="item in c.menuThreeItems" title="{{item.name}}" target="{{item.target}}"
+        	link="{{item.link}}" ng-if="c.iepOptionsCheck(item)"> </usa-header-extended-nav-child>
+	</usa-header-extended-nav-parent>
+
+    <!-- Simple link -->
+    <usa-header-extended-nav-parent title="CISA.gov" target="_blank" link="https://cisa.gov">
+    </usa-header-extended-nav-parent>
+
+  </usa-header-extended-nav>
+</usa-header-extended>
+
+<!-- Org Request Modal -->
+<div ng-include="'rsc_top_banner_org_request_modal'"></div>

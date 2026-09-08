@@ -1,0 +1,108 @@
+<div class="row question_box" ng-if="c.data.show_question">
+    <div class="col-md-12" ng-if="options.title">
+        <h2 class="title">
+            {{::options.title}}
+        </h2>
+    </div>
+
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12 question">
+                <strong>
+                    <div ng-bind-html="c.question">
+                    </div>
+                </strong>
+                <div class="pl-10" ng-if="c.data.tooltip_body">
+                    <button class="tooltip-button" aria-label="Guidance for {{c.options.title}}" href="#{{c.data.sys_id}}_tooltip_modal"
+                        aria-controls="default-modal" ng-click="c.defaultVisible = !c.defaultVisible">
+                        <i id="{{c.data.sys_id}}_tooltip" class="fa fa-question-circle tooltip-fa-color"
+                            aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <usa-modal id="{{c.data.sys_id}}_tooltip_modal" is-visible="c.defaultVisible" aria-labelledby="default-modal-heading"
+            aria-describedby="default-modal-description">
+            <usa-modal-body class="usa-prose">
+                <p id="default-modal-description" ng-bind-html="c.tooltip_body"></p>
+            </usa-modal-body>
+        </usa-modal>
+
+        <!-- Default Modal
+    <div ng-if="c.data.tooltip == '1'" ng-show="c.show_modal" ng-focus="c.show_modal" class="modal fade" ng-class="{'in': c.show_modal}" role="dialog" aria-labelledby="Additional Resources">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button id="close_modal_{{c.data.sys_id}}" type="button" class="close" ng-click="c.toggle_modal()" ng-blur="c.force_focus()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <!--<h4 class="modal-title">Guidance</h4> 
+          </div>
+          <div class="modal-body" ng-bind-html="c.tooltip_body">
+          </div>
+          <div class="modal-footer sr-only" ng-blur="c.focus_element()" tabindex="0">
+          </div>
+          </div>
+      </div>
+    </div>
+		-->
+
+        <!-- 
+    <div class="row">
+      <div class="col-md-12">
+        <label class="radio-inline radio-box">
+          <input name="{{options.column_name}}" id="{{options.column_name}}" value="yes" type="radio" ng-disabled="c.nav.isSummaryPage()" ng-model="c.rscForm.elements[c.options.column_name].value" aria-label="{{c.question_label}}"/><span class="label-text">Yes</span>
+        </label>
+        <label class="radio-inline radio-box">
+          <input name="{{options.column_name}}" id="{{options.column_name}}" value="no" type="radio" ng-disabled="c.nav.isSummaryPage()"  ng-model="c.rscForm.elements[c.options.column_name].value" aria-label="{{c.question_label}}"/><span class="label-text">No/Unsure</span>
+        </label>
+      </div>
+    </div>
+    -->
+
+        <usa-fieldset id="{{c.dual_radio.id}}_bordered">
+            <div class="responsive-radio">
+                <usa-radio ng-repeat="choice in c.dual_radio.choices">
+                    <usa-radio-input id="{{c.dual_radio.id}}_{{choice.value}}_bordered"
+                        name="{{c.dual_radio.id}}_value_bordered" ng-value="choice.value"
+                        ng-model="c.rscForm.elements[c.options.column_name].value" variant="tile"
+                        aria-label="{{c.question_label}}" ng-disabled="{{c.nav.isSummaryPage()}}"></usa-radio-input>
+                    <usa-radio-label for="{{c.dual_radio.id}}_{{choice.value}}_bordered">
+                        {{choice.displayValue}}
+                        <usa-radio-label-description ng-if="choice.description">
+                            {{choice.description}}
+                        </usa-radio-label-description>
+                    </usa-radio-label>
+                </usa-radio>
+            </div>
+        </usa-fieldset>
+
+    </div>
+
+
+    <div ng-if="c.rscForm.elements[c.options.column_name].value == 'no' && c.data.show_resource == '1'"
+        class="col-md-12 irf-pt-30 irf-pb-15">
+        <!--
+    <div class="row white-box">
+      <div class="col-md-12">
+        <h3 class="title">
+          <strong>Recommended Resources</strong>
+        </h3>
+      </div>
+      <div class="col-md-12 display-url" ng-include="c.data.template">
+      </div>
+    </div> -->
+
+        <usa-accordion type="bordered" multiselectable="true">
+            <usa-accordion-item id="recommended_resources" role="heading" aria-level="2" is-open="true">
+                <usa-accordion-trigger id="{{c.data.sys_id}}_accordion" aria-label="Recommended Resources - {{c.question_label}}">
+                    Recommended Resources
+                </usa-accordion-trigger>
+                <usa-accordion-content>
+                    <div ng-include="c.data.template"></div>
+                </usa-accordion-content>
+            </usa-accordion-item>
+        </usa-accordion>
+    </div>
+
+
+</div>

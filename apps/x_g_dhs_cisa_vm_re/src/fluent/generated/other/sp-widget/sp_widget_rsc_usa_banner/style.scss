@@ -1,0 +1,45 @@
+.usa-banner {
+  background-color: #f0f0f0 !important;
+  font-size: 1.24rem;
+  margin: 0rem;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+.flag-icon {
+  margin-left: 2rem; 
+}
+
+.header-spacing {
+  margin-left: 1rem; 
+}
+
+.link-toggle {
+  margin-left: 3rem;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #0066ea;
+  /* Link color */
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.usa-banner-expanded {
+  background-color: #f0f0f0 !important;
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 1.4rem;
+}
+
+.buffer {
+  padding: 10px;
+}
+
+
+@media screen and (max-width: 990px) {
+  .expanded-banner-icons {
+    margin-left: 30px; 
+  }
+}
+

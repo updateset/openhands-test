@@ -1,0 +1,259 @@
+/* // ---------------- GLOBAL ---------------- // */
+.ml-0 {
+  margin-left: 0px;
+}
+
+.table-scroll {
+  max-height: 25rem;
+  overflow-y: scroll;
+}
+
+.center {
+  text-align: center; 
+}
+
+.pdf-box {
+  height: 55rem; 
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.w-full {
+  width:100% 
+}
+
+.template-container {
+  padding-bottom: 3rem;
+  background-color: #fff;
+  box-shadow: 0rem .8rem 3.6rem 0rem rgba(141, 141, 141, .1);
+}
+
+.template-form {
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+}
+
+.template-h1 {
+  font-weight: 600;
+  color: #003e67;
+  font-size: 4rem;
+  padding-top: .8rem;
+  padding-bottom: .4rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.template-h2 {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  color: #003E67;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.template-blue-box {
+  border-radius: .2rem;
+  border: .1rem solid #B8D9E8;
+  background: #F5FAFC;
+  padding: 2rem;
+}
+
+.template-footer-box {
+  border-radius: .2rem;
+  border: .1rem solid #B8D9E8;
+  background: #B8D9E8;
+  padding: 2rem;
+}
+
+.template-blue-border {
+  border-radius: .2rem;
+  border: .1rem solid #B8D9E8;
+}
+
+.cyhy-verification {
+  font-size: 1.5rem;
+  padding-top: .5rem;
+}
+
+.edit-pencil {
+  filter: invert(1); 
+}
+
+#pas p {
+  font-size: 1.4rem; 
+}
+
+#pas h2 {
+  font-size: 2.1rem; 
+}
+
+
+/* Flex styling */
+.flex {
+  display: flex;
+}
+
+.parent-flex {
+  display: flex;
+  flex: 1;
+}
+
+.child-flex {
+  flex: 1;
+}
+
+.flex-bottom {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Canvas */
+#signature_pad {
+      background-color: white;
+      border: 1px solid;
+      width: 100%;
+      height: 100px;
+      touch-action: none;
+    }
+
+/* Loading spinner styling  */
+.loading {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+}
+
+.loading-wrapper {
+  position: relative;
+  width: auto;
+  height: auto;
+  top: 40%;
+  left: 40%;
+}
+
+/* // ---------------- VALIDATION ---------------- // */
+.red {
+  color: #CE4009 !important;
+}
+
+/* // ---------------- USWDS Overrides ---------------- // */
+.usa-step-indicator__current-step {
+    height: 2.5rem;
+    border-radius: 99rem;
+    width: 2.5rem;
+    font-weight: 400;
+    font-feature-settings: "tnum" 1, "kern" 1;
+    background-color: #005ea2;
+    color: #fff;
+    display: inline-block;
+    padding: .3rem;
+    text-align: center;
+}
+
+.usa-step-indicator--no-labels .usa-step-indicator__heading {
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+
+.usa-radio {
+  background: transparent;
+}
+
+.usa-combo-box__input,
+.usa-combo-box,
+.usa-date-picker__wrapper,
+.usa-input,
+.usa-input-group,
+.usa-select,
+.usa-legend,
+.usa-list li,
+.usa-label,
+.usa-textarea {
+  max-width: 100%;
+}
+
+.usa-modal--lg {
+  max-width: 65vw;
+}
+
+.usa-modal--lg .usa-modal__main {
+  max-width: 80%;
+  padding-bottom: 2.5rem;
+  padding-top: 1em;
+  padding: .8rem .5rem 2rem;
+}
+
+.usa-modal-overlay {
+  overflow-y: hidden;
+}
+
+.modal-body {
+  overflow-y: scroll;
+  overflow-x: clip;
+  height: 50vh;
+  margin-bottom: 1.5rem;
+}
+
+.usa-button--outline:disabled,
+.usa-button--outline[aria-disabled=true] {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px #005ea2;
+  color: #005ea2;
+}
+
+.usa-button--outline:disabled,
+.usa-button--outline[aria-disabled=true]: hover {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px #005ea2;
+  color: #005ea2;
+}
+
+.usa-combo-box__input-button-separator {
+  top: 2px;
+}
+
+.usa-masked {
+  background-color: white !important;
+}
+
+.usa-input[readonly] {
+  background-color: #c9c9c9 !important;
+}
+
+.usa-checkbox {
+  background: transparent;
+}
+
+.usa-checkbox__label {
+  padding-top: .25rem;
+  margin-top: 0rem;
+}
+
+/* Remove info icon for beta banner */
+@supports ((-webkit-mask: url()) or (mask: url())) {
+  .usa-alert--info .usa-alert__body::before {        
+    mask-image: none;
+    mask-position: center center;
+    mask-repeat: no-repeat;
+  }
+}
+
+.usa-alert--info .usa-alert__body::before {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: unset;
+}
+
+@supports ((-webkit-mask:url()) or (mask:url())) {
+  .usa-alert--info .usa-alert__body::before {
+    background-color: transparent;                
+  }
+}

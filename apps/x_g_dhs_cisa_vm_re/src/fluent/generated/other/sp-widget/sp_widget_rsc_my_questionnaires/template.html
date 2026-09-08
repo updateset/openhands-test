@@ -1,0 +1,28 @@
+<!-- Page Container -->
+<div>
+
+    <!-- White box -->
+    <div class="row mb-8">
+        <div class="col-md-12">
+            <div class="p-8 bg-white-shadow">
+
+                <!-- Header -->
+                <div class="row px-4">
+                    <div class="col-md-12">
+                        <h1 class="template-h1">
+                            My Questionnaires
+                        </h1>
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div ng-include="'questionnaire_table'"></div>
+
+                <!-- Pagination -->
+                <div ng-if="c.total > c.limit" ng-include="'questionnaire_pagination'"></div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

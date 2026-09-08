@@ -1,0 +1,72 @@
+<div class="row question_box" ng-if="c.data.show_question">
+  <div class="col-md-12">
+    <h2 class="title">
+      {{::options.title}}
+    </h2>
+  </div>
+
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-12 question">
+        <strong>
+          <div ng-bind-html="c.question">
+          </div>
+        </strong>
+        <div class="pl-10" ng-if="c.data.tooltip_body">
+          <button class="tooltip-button" ng-click="c.toggle_modal()" aria-label="Guidance for {{c.options.title}}">
+            <i class="fa fa-question-circle light-blue" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div ng-if="c.data.tooltip == '1'" ng-focus="c.show_modal" ng-show="c.show_modal" class="modal fade" ng-class="{'in': c.show_modal}" role="dialog" aria-labelledby="Additional Resources">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button id="close_modal_{{c.data.sys_id}}" type="button" class="close" ng-click="c.toggle_modal()" ng-blur="c.force_focus()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Guidance</h4>
+          </div>
+          <div class="modal-body" ng-bind-html="c.tooltip_body">
+          </div>
+           <div class="modal-footer sr-only" ng-blur="c.focus_element()" tabindex="0">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <label class="radio-inline radio-box">
+          <input name="{{options.column_name}}" value="implemented" type="radio" ng-disabled="c.nav.isSummaryPage()" ng-model="c.rscForm.elements[c.options.column_name].value" aria-label="{{c.question_label}}"/> <span class="label-text">Implemented</span>
+        </label>
+        <label class="radio-inline radio-box">
+          <input name="{{options.column_name}}" value="in_progress" type="radio" ng-disabled="c.nav.isSummaryPage()"  ng-model="c.rscForm.elements[c.options.column_name].value" aria-label="{{c.question_label}}"/><span class="label-text" >In Progress</span>
+        </label>
+        <label class="radio-inline radio-box">
+          <input name="{{options.column_name}}" value="scoped" type="radio" ng-disabled="c.nav.isSummaryPage()"  ng-model="c.rscForm.elements[c.options.column_name].value" aria-label="{{c.question_label}}"/><span class="label-text" >Scoped</span>
+        </label>
+        <label class="radio-inline radio-box">
+          <input name="{{options.column_name}}" value="not_started" type="radio" ng-disabled="c.nav.isSummaryPage()"  ng-model="c.rscForm.elements[c.options.column_name].value" aria-label="{{c.question_label}}"/><span class="label-text" >Not Started</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div ng-if="c.rscForm.elements[c.options.column_name].value == 'not_started' && c.data.show_resource == '1'"
+       class="col-md-12">
+    <div class="row white-box">
+      <div class="col-md-12">
+        <h3 class="title">
+          <strong>Recommended Resources</strong>
+        </h3>
+      </div>
+        <div class="col-md-12 display-url" ng-include="c.data.template">
+      </div>
+    </div>
+  </div>
+
+</div>
+

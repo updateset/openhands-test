@@ -1,0 +1,81 @@
+li{
+  list-style: none;
+  margin-left: 0px;
+}
+
+.usa-card{
+  height: 292px;
+  padding: 10px;
+} 
+
+.usa-card__container{
+	padding:15px;
+}
+
+.usa-card__body{
+	color: $brand-primary;
+}
+
+.usa-button{
+  background-color: $brand-primary-darker;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: .1rem solid transparent;
+  white-space: nowrap;
+  padding: .6rem 1.6rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  border-radius: .4rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.usa-button:hover{
+	background-color: #003355;
+}
+
+.usa-card__header{
+    padding: .5rem 1.5rem 1.5rem;
+}
+
+.header-title-flex{
+	display: flex;
+}
+
+.img-size{
+	min-width: 60px;
+  max-width: 60px;
+}
+
+.title {
+  font-family: "Source Sans Pro Web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  //line-height: 1.2;
+  min-height: 80px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  /* CISA-IRF/H3 */
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.title-blue {
+  color: $brand-primary-darker;
+  padding-top 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .title {
+  	font-size: 2.5rem;
+  }
+}

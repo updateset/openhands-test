@@ -1,0 +1,61 @@
+<!-- Page Container -->
+<div>
+    <div id="create_account_top" class="row pb-2">
+    </div>
+
+    <!-- ADMIN Only Page nav -->
+    <!-- <div class="row mb-8 p-8 bg-white-shadow">
+        <div class="col-md-12">
+
+            <div class="row pb-4">
+                <div class="col-md-12">
+                    <usa-label><strong>For demo purposes only: Select page</strong></usa-label>
+
+                    <usa-select ng-model="c.page">
+                        <option value="create_account">
+                            Create Account
+                        </option>
+                        <option value="submission_confirmation">
+                            Submission Confirmation
+                        </option>
+                    </usa-select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <usa-button ng-click="c.repcatcha()">Recaptcha Test</usa-button>
+                </div>
+            </div>
+
+        </div>
+    </div> -->
+
+    <!-- Loading spinner -->
+    <div ng-if="c.loading" class="loading">
+        <div class="loading-wrapper"> <svg width="150" height="150" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25" />
+                <path
+                    d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z">
+                    <animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12"
+                        repeatCount="indefinite" />
+                </path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Create Account Form -->
+    <div class="row mb-8">
+        <div class="col-md-12">
+            <div ng-include="c.page"></div>
+        </div>
+    </div>
+
+    <div class="row mb-8">
+        <div class="col-md-12">
+            <div ng-include="'terms_of_use'"></div>
+        </div>
+    </div>
+
+</div>

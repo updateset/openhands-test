@@ -1,0 +1,9 @@
+<div class="articleContainer">
+
+    <!-- Shows the article's title - You can remove this line if you don't want to show this -->
+    <h3 ng-bind-html="data.articleTitle"></h3>
+
+    <!-- This line loads the article's HTML into the body of this widget -->
+    <div ng-init="onLoad()" ng-bind-html="data.articleHTML"></div>
+
+</div>

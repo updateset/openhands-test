@@ -1,0 +1,12 @@
+<div class="row" ng-if="data.version == 1">
+    <div class="col-md-4">
+        <widget id="rsc_status_modal" options='data.statusModalOptions'></widget>
+    </div>
+    <div class="col-md-8">
+        <widget id="rsc_intake"></widget>
+    </div>
+</div>
+
+<div class="row" ng-if="data.version == 3">
+    <widget id="rsc_intake_with_status_modal_v2"></widget>
+</div>

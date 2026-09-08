@@ -1,0 +1,88 @@
+<!-- pg0 -->
+<div>
+  <div id="cyhy_enrollment_top" class="row pb-2">
+  </div>
+
+  <!-- Alert -->
+  <div class="row pb-8">
+      <div class="col-md-12">
+
+          <!-- Warning Alert Without Icon -->
+          <usa-alert variant="info" no-icon role="alert" aria-live="polite">
+              <usa-alert-text class="ml-0">
+                  You're viewing the beta version of our website. We're working hard to enhance your experience. Share
+                  your feedback with us at <a class="usa-link" href="mailto:contact@mail.cisa.dhs.gov">contact@mail.cisa.dhs.gov</a>
+              </usa-alert-text>
+          </usa-alert>
+
+      </div>
+  </div>
+
+  <!-- ADMIN Only Page nav -->
+  <div class="row mb-8 p-8 bg-white-shadow">
+    <div class="col-md-12">
+
+      <div class="row pb-4">
+        <div class="col-md-12">
+          <usa-label><strong>For demo purposes only: Select page</strong></usa-label>
+
+          <usa-select ng-model="c.page">
+            <option value="cyhy_enrollment_page_1">
+              Services
+            </option>
+            <option value="cyhy_enrollment_page_2">
+              Authorization
+            </option>
+            <option value="cyhy_enrollment_confirmation">
+              Submission Confirmation
+            </option>
+          </usa-select>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Loading spinner -->
+  <div ng-if="c.loading" class="loading">
+    <div class="loading-wrapper"> <svg width="150" height="150" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25" />
+        <path
+          d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z">
+          <animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12"
+            repeatCount="indefinite" />
+        </path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- CYHY Enrollment Form -->
+  <div class="row mb-8">
+    <div class="col-md-12">
+      <div ng-if="false" class="mb-8">
+        <div class="row">
+          <div class="col-md-12">
+            <usa-alert variant="error" role="alert" aria-live="assertive">
+              <usa-alert-heading role="heading" aria-level="2">
+                <strong>Warning!</strong>
+              </usa-alert-heading>
+              <usa-alert-text>
+                <strong>This page is in development:</strong> Features currently displayed are not
+                fully completed.
+              </usa-alert-text>
+            </usa-alert>
+          </div>
+        </div>
+      </div>
+      <div ng-include="c.page"></div>
+    </div>
+  </div>
+
+  <!-- Terms of use if applicable -->
+  <div class="row mb-8">
+    <div class="col-md-12">
+      <div id="pas" ng-include="'cyhy_terms_of_use'"></div>
+    </div>
+  </div>
+
+</div>

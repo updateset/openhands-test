@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index">
+    <sys_index action="INSERT_OR_UPDATE">
+        <access_method/>
+        <col_name_string>sector</col_name_string>
+        <index_col_name element="sector" name="x_g_dhs_cisa_vm_re_rsc_sectors">b9549eef873cce50147ec9550cbb3541</index_col_name>
+        <logical_table_name>x_g_dhs_cisa_vm_re_rsc_sectors</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2024-03-13 19:22:16</sys_created_on>
+        <sys_id>d819de27877cce50147ec9550cbb357b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_g_dhs_cisa_vm_re_rsc_sectors</sys_name>
+        <sys_package display_value="CISA VM Ready Set Cyber" source="x_g_dhs_cisa_vm_re">7cff490f87ebf1106fa97627cebb3585</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CISA VM Ready Set Cyber">7cff490f87ebf1106fa97627cebb3585</sys_scope>
+        <sys_update_name>sys_index_x_g_dhs_cisa_vm_re_rsc_sectors_sector</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-03-13 19:22:16</sys_updated_on>
+        <table display_value="RSC Sectors" name="x_g_dhs_cisa_vm_re_rsc_sectors">c6f0162f873cce50147ec9550cbb35d1</table>
+        <unique_index>false</unique_index>
+    </sys_index>
+</record_update>

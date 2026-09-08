@@ -1,0 +1,100 @@
+<!--RSC -->
+<div id="rsc_status" class="row floating-container">
+    <div class="col-xs-12 bg-custom-blue">
+        <div class="row pb-2"></div>
+        <h2 class="row text-white title-text p20-top p20-l p10-bottom">
+            Overall Progress
+        </h2>
+        <div class="row p20-l p20-r p20-bottom">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{c.getPercentComplete()}}"
+                    aria-live="{{c.roundDown(c.getPercentComplete()) + '% Complete'}}" aria-valuemin="0"
+                    aria-valuemax="100" style="width:{{c.getPercentComplete()}}%">
+                    <span class="sr-only">{{c.getPercentComplete()}}% Complete</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Accordian Section -->
+    <div class="accordion col-xs-12" id="incidentReportStatus">
+        <div class="card" ng-repeat="section in c.sections track by $index" ng-if="section.org_size == c.nav.org_size">
+
+            <div class="card-header" id="heading{{$index}}">
+                <div class="row collapsed flex"
+                    ng-class="{'selected-section': c.isSelected(section), 'not-selected-section': !c.isSelected(section)}">
+                    <div class="col-xs-10 p20-l p20-bottom p20-top"> <!-- -->
+                        <div class="row section-title"
+                            ng-class="{'selected-section-title': c.isSelected(section), 'not-selected-section-title': !c.isSelected(section)}">
+                            <span>
+                                <!-- (c.nav.org_size == 'small' && c.nav.getPage() == 2) || (c.nav.org_size != 'small' && c.nav.getPage() == 9) -->
+                                <button class="button-section" ng-class="c.getClass(section.template)" ng-click="c.navTo(section)" aria-label="{{section.name}}"
+                                    role="button"
+                                    ng-disabled="(section.template == 'rsc_intake_summary') || (c.nav.org_size == 'small' && c.nav.getPage() == 2) || (c.nav.org_size != 'small' && c.nav.getPage() == 9)">
+                                    {{section.name}}
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Percentage Calculation -->
+                    <div class="col-xs-2 p20-bottom p20-top" ng-if="section.children.length == 0">
+                        <div class="row section-percent"
+                            ng-class="{'selected-section-title': c.isSelected(section), 'not-selected-section-title': !c.isSelected(section)}">
+                            <span ng-if="section.hasOwnProperty('totalPoints')" ng-class="c.getClass(section.template)"
+                                aria-label="{{section.name}} completion percentage">
+                                {{c.sectionCompletion(c.master[section.org_size][section.template],
+                                section.totalPoints)}}%
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Section Children -->
+                    <div class="col-xs-2 p20-bottom p20-top max-height" ng-if="section.children.length > 0">
+                        <button class="btn btn-custom center"
+                            ng-class="{'selected-btn': c.isSelected(section), 'not-selected-btn': !c.isSelected(section)}"
+                            type="button" ng-click="c.toggleSection($index)" aria-expanded="{{section.selected}}"
+                            aria-label="Toggle expand on {{section.name}} section">
+                            <!-- ng-if="c.isSelected(section) == false" -->
+                            <i class="fa fa-plus" ng-if="section.selected == false" aria-hidden="true"></i>
+                            <!-- ng-if="c.isSelected(section) == true" -->
+                            <i class="fa fa-minus" ng-if="section.selected == true" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Card Body Expanded -->
+            <!-- ng-if="c.isSelected(section) && section.children.length > 0" -->
+            <div ng-if="section.selected && section.children.length > 0" id="collapse{{$index}}"
+                class="row collapse in">
+                <div class="card-body">
+                    <ul class="no-bullets">
+                        <li class="section-area row p20-r flex" ng-repeat="child in section.children"
+                            ng-class="{'card-body-selected': c.isChildSelected(child), 'card-body-unselected': !c.isChildSelected(child)}">
+                            <div class="col-xs-10 p20-top p20-bottom">
+                                <!-- <div class="row"> -->
+                                <button class="button-section" ng-class="c.getClass(section.template)" ng-click="c.navTo(child)" aria-label="{{child.name}}"
+                                    role="button"
+                                    ng-disabled="(c.nav.org_size == 'small' && c.nav.getPage() == 2) || (c.nav.org_size != 'small' && c.nav.getPage() == 9)">
+                                    {{child.name}}
+                                </button>
+                                <!-- </div> -->
+                            </div>
+
+                            <div class="col-xs-2 p20-top p20-bottom max-height">
+                                <!-- <div class="row"> -->
+                                <span class="pull-right center" ng-class="c.getClass(section.template)" ng-if="child.hasOwnProperty('totalPoints')"
+                                    aria-label="{{child.name}} completion percentage">
+                                    {{c.sectionCompletion(c.master[section.org_size][child.template],
+                                    child.totalPoints)}}%
+                                </span>
+                                <!-- </div> -->
+                            </div>
+                            <!-- <i class="fa fa-circle-o pull-right p20-r" aria-hidden="true"></i> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

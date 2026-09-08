@@ -1,0 +1,64 @@
+<!-- White Box -->
+<div class="row mb-8">
+    <div class="col-md-12">
+        <div id="sum_top" class="row pb-1">
+        </div>
+        <div class="p-8 bg-white-shadow">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- Heading -->
+                    <div class="row">
+                        <div class="col-md-8" tabindex="0">
+                            <h1 class="sd-h1">Summary and Resources</h1>
+                        </div>
+                        <div class="col-md-4 mt-22">
+                            <div class="header-org">
+                                <img id="template_header_org_src" src="{{c.org_image_src}}" />
+                                <p class="dark-blue">
+                                    {{c.template_header_org_size}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Horizontal Rule -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <hr class="template-horizontal-line" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 header-title-flex">
+                            <div class="pr-4">
+                                <p class="mb-2"><strong>Questionnaire ID</strong></p>
+                                <p>{{c.rscForm.elements.number.value}}</p>
+                            </div>
+                            <div class="px-8">
+                                <p class="mb-2"><strong>Version</strong></p>
+                                <p>{{c.rscForm.elements.version.value}}</p>
+                            </div>
+                            <div class="pl-4">
+                                <p class="mb-2"><strong>Submitted</strong></p>
+                                <p>{{c.rscForm.elements.updated.value}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Templates -->
+                    <div ng-repeat="page in c.nav.pages">
+                        <div class="section-blue" ng-include="page">
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="py-8">
+                        <div ng-include="'rsc_sum_footer'"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

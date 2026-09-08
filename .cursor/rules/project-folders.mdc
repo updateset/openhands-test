@@ -1,0 +1,75 @@
+---
+alwaysApply: true
+---
+
+Use the Unslop skill on GitHub issue titles, bodies, and comments.
+Folder purposes:
+- `./apps` — now-sdk applications pulled from the ServiceNow instance
+- `./docs/research` — research performed for this project
+- `./docs/training` — artifacts given to the customer to train them on an app or module
+- `./docs/requirements` — Plaud MCP pulls or user-generated customer requirements
+- `./scripts` — scripts created by AI tools to complete a task (e.g. convert a document)
+- `./superpowers` — Superpowers skill artifacts
+## GitHub issues
+
+Use GitHub MCP (`create_issue`, `sub_issue_write`, comments, state). Use `gh` only when MCP is unavailable.
+
+### Working on an issue
+
+When work is tied to a GitHub issue (dashboard launch, URL, `#n`, or an issue you created), update that issue as you go.
+
+1. Comment when something lands (files, behavior, decision).
+2. Set state when work starts or finishes.
+3. Comment on a sub-issue for slice work. Comment on the parent only when a slice finishes or the plan changes.
+
+Done when the issue you are on reflects current state and the latest landed change.
+
+### New requirements
+
+When the user asks for new requirements on a feature:
+
+1. Create one parent issue for the feature.
+2. Create a sub-issue per implementation slice, not one ticket per requirement sentence.
+3. Put later decisions on the slice they affect (comment or a short body edit).
+
+Done when the parent and every slice exist as GitHub issues and the user has the URLs.
+
+### Ticket text
+
+Apply the Unslop skill to issue titles, bodies, and comments.
+
+Bodies are GitHub-flavored markdown with only these headings:
+
+```markdown
+## What
+
+What is being added.
+
+## Why
+
+Why it is needed.
+
+## Tech plan
+
+How it will be done.
+```
+
+Keep titles and comments to the same three facts. No status theater, no process essays.
+## ServiceNow rules
+Pull all variables from `./servicenow_mcp.json` we will reference them for all instructions below
+This is a servicenow project whenever you call the servicenow mcp use the `shortName` as the auth alias for any MCP calls.
+when calling `now-sdk` make sure that you set the auth alias via ```now-sdk auth --use {shortName}```
+When calling the servicenow docs mcp reference the `version` to determin which version of the docs you want to use.
+Before any ServiceNow MCP call that creates or updates instance artifacts, call `set_current_scope` with `instance` = `shortName` (or alias) and `app_sys_id` from `./servicenow_mcp.json`. Then set the update set from `update_set_sys_id` / `update_set` using `set_current_update_set`. If `app_sys_id` or update set is missing, stop and tell the user to use the US Chrono dashboard pickers.
+
+## ServiceNow setup
+
+1. Call ServiceNow MCP `list_auth_aliases`. Do not write access or refresh tokens to any file.
+2. Ask the user to pick one alias in chat.
+3. Write project-root `servicenow_mcp.json` with the selected alias fields (at least `alias` / `authAlias`, `instanceUrl` if present, `username` / `shortName` if present). No access or refresh tokens.
+4. Call `check_instance_health` with that alias and `include_version: true`. Persist connectivity success and product family / version from the health payload into the same JSON (`productFamily` and/or `version` as returned). If health fails, stop and report; do not pretend success.
+5. Create folders listed above unless skip policy says leave existing.
+6. Write `.cursor/rules/project-folders.mdc` with `alwaysApply: true`.
+
+7. Call ServiceNow MCP `list_scoped_apps` with `instance` set to the chosen alias (`shortName` if present) and `limit` 200.
+8. Merge into project-root `servicenow_mcp.json` an `apps` array of `{ sysId, name, scope }` from each row (`sys_id` maps to `sysId`). Do not run now-sdk's init command in this step. Stop and tell the user to pick an app in the US Chrono dashboard app picker.

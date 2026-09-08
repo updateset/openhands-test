@@ -1,0 +1,52 @@
+<div class="usa-banner" aria-label="Official government website">
+  <img
+       class="flag-icon"
+       src="us_flag_small.png"
+       alt="U.S. flag"
+       width="16"
+       height="11"
+       />
+  <span class="header-spacing"
+        >${An official website of the United States government}</span
+    >
+  <button
+          class="link-toggle"
+          type="button"
+          aria-controls="gov-toggle"
+          aria-expanded="{{selected}}"
+          ng-click="c.toggleLink()"
+          >
+    ${Here's how you know}
+    <i
+       class="fa fa-solid"
+       ng-class="{'fa-caret-down' : selected == false, 'fa-caret-up' : selected == true}"
+       ></i>
+  </button>
+
+  <div class="usa-banner-expanded row" ng-if="selected == true">
+    <div class="col-xs-12 col-md-3 col-md-offset-3">
+      <div class="row">
+        <div class="col-xs-2 buffer">
+          <img class="expanded-banner-icons" src="icon-dot-gov.svg" width="40px" height="40px" />
+        </div>
+        <div class="col-xs-10">
+          <strong>Official websites use .gov</strong>
+          <br />
+          <span>A <strong>.gov</strong> website belongs to an official government organization in the United States.</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-3">
+      <div class="row">
+        <div class="col-xs-2 buffer">
+          <img class="expanded-banner-icons" src="icon-https.svg" width="40px" height="40px" />
+        </div>
+        <div class="col-xs-10">
+          <strong>Secure .gov websites use HTTPS</strong>
+          <br />
+          <span>A <strong>lock (<img src="https.png" width="20px" height="20px"/>)</strong> or <strong>https://</strong> means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

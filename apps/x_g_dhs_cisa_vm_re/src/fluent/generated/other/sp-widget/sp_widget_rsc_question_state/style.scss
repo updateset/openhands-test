@@ -1,0 +1,58 @@
+.title {
+  padding-bottom: 20px;
+  color: #003E67
+}
+
+.question {
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+h2 {
+  margin-top: 0px;
+}
+
+.radio-box {
+  margin-bottom: 10px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.tooltip-button { 
+  border: none;
+  background: none;
+  padding: 0px;
+  text-align: left; 
+}
+
+.modal {
+  display: block;
+  padding-top: 10%;
+}
+
+.modal-title {
+  color: #181A1F;
+}
+
+.modal-content {
+  border-radius: 0px;
+}
+
+.white-box {
+  border-radius: 5px;
+  border: 1px solid #DEDFE0;
+  background: #FFF;
+  padding: 2rem;
+  margin: 2rem 0rem 2rem 0rem; 
+}
+
+.hide {
+  display: none;
+}
+
+.display-url {
+  word-wrap: break-word;
+}

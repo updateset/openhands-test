@@ -1,0 +1,443 @@
+<div class="col-md-4">
+    <!--RSC -->
+    <div id="rsc_status" class="row floating-container">
+        <div class="col-xs-12 bg-custom-blue">
+            <div class="row pb-2"></div>
+            <h2 class="row text-white title-text p20-top p20-l p10-bottom">
+                Overall Progress
+            </h2>
+            <div class="row p20-l p20-r p20-bottom">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{c.getPercentComplete()}}"
+                        aria-live="{{c.roundDown(c.getPercentComplete()) + '% Complete'}}" aria-valuemin="0"
+                        aria-valuemax="100" style="width:{{c.getPercentComplete()}}%">
+                        <span class="sr-only">{{c.getPercentComplete()}}% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Accordian Section -->
+        <div class="accordion col-xs-12" id="incidentReportStatus">
+            <div class="card" ng-repeat="section in c.sections track by $index"
+                ng-if="section.org_size == c.nav.org_size">
+
+                <div class="card-header" id="heading{{$index}}">
+                    <div class="row collapsed flex"
+                        ng-class="{'selected-section': c.isSelected(section), 'not-selected-section': !c.isSelected(section)}">
+                        <div class="col-xs-10 p20-l p20-bottom p20-top"> <!-- -->
+                            <div class="row section-title"
+                                ng-class="{'selected-section-title': c.isSelected(section), 'not-selected-section-title': !c.isSelected(section)}">
+                                <span>
+                                    <!-- (c.nav.org_size == 'small' && c.nav.getPage() == 2) || (c.nav.org_size != 'small' && c.nav.getPage() == 9) -->
+                                    <button class="button-section" ng-class="c.getClass(section.template)"
+                                        ng-click="c.navTo(section)" aria-label="{{section.name}}" role="button"
+                                        ng-disabled="(section.template == 'rsc_intake_summary') || (c.nav.org_size == 'small' && c.nav.getPage() == 2) || (c.nav.org_size != 'small' && c.nav.getPage() == 9)">
+                                        {{section.name}}
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Percentage Calculation -->
+                        <div class="col-xs-2 p20-bottom p20-top" ng-if="section.children.length == 0">
+                            <div class="row section-percent"
+                                ng-class="{'selected-section-title': c.isSelected(section), 'not-selected-section-title': !c.isSelected(section)}">
+                                <span ng-if="section.hasOwnProperty('totalPoints')"
+                                    ng-class="c.getClass(section.template)"
+                                    aria-label="{{section.name}} completion percentage">
+                                    {{c.sectionCompletion(c.master[section.org_size][section.template],
+                                    section.totalPoints)}}%
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Section Children -->
+                        <div class="col-xs-2 p20-bottom p20-top max-height" ng-if="section.children.length > 0">
+                            <button class="btn btn-custom center"
+                                ng-class="{'selected-btn': c.isSelected(section), 'not-selected-btn': !c.isSelected(section)}"
+                                type="button" ng-click="c.toggleSection($index)" aria-expanded="{{section.selected}}"
+                                aria-label="Toggle expand on {{section.name}} section">
+                                <!-- ng-if="c.isSelected(section) == false" -->
+                                <i class="fa fa-plus" ng-if="section.selected == false" aria-hidden="true"></i>
+                                <!-- ng-if="c.isSelected(section) == true" -->
+                                <i class="fa fa-minus" ng-if="section.selected == true" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Card Body Expanded -->
+                <!-- ng-if="c.isSelected(section) && section.children.length > 0" -->
+                <div ng-if="section.selected && section.children.length > 0" id="collapse{{$index}}"
+                    class="row collapse in">
+                    <div class="card-body">
+                        <ul class="no-bullets">
+                            <li class="section-area row p20-r flex" ng-repeat="child in section.children"
+                                ng-class="{'card-body-selected': c.isChildSelected(child), 'card-body-unselected': !c.isChildSelected(child)}">
+                                <div class="col-xs-10 p20-top p20-bottom">
+                                    <!-- <div class="row"> -->
+                                    <button class="button-section" ng-class="c.getClass(section.template)"
+                                        ng-click="c.navTo(child)" aria-label="{{child.name}}" role="button"
+                                        ng-disabled="(c.nav.org_size == 'small' && c.nav.getPage() == 2) || (c.nav.org_size != 'small' && c.nav.getPage() == 9)">
+                                        {{child.name}}
+                                    </button>
+                                    <!-- </div> -->
+                                </div>
+
+                                <div class="col-xs-2 p20-top p20-bottom max-height">
+                                    <!-- <div class="row"> -->
+                                    <span class="pull-right center" ng-class="c.getClass(section.template)"
+                                        ng-if="child.hasOwnProperty('totalPoints')"
+                                        aria-label="{{child.name}} completion percentage">
+                                        {{c.sectionCompletion(c.master[section.org_size][child.template],
+                                        child.totalPoints)}}%
+                                    </span>
+                                    <!-- </div> -->
+                                </div>
+                                <!-- <i class="fa fa-circle-o pull-right p20-r" aria-hidden="true"></i> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-8">
+    <div class="container-xxl container-mod">
+        <div id="rsc-intake-top" class="row pb-2"></div>
+        <div class="container-fluid" id="rsc-intake-container" tabindex="0">
+            <!-- Modal -->
+            <div ng-show="c.show_global_modal" class="modal fade" ng-class="{'in': c.show_global_modal}" tabindex="-1"
+                role="dialog" aria-labelledby="Additional Resources">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button role="button" class="close" ng-click="c.toggle_global_modal()" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title">Guidance</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div ng-include="c.global_modal_template"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Modal -->
+
+            <!-- Loading spinner -->
+            <div ng-if="c.loading" class="loading">
+                <div class="loading-wrapper"> <svg width="150" height="150" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"
+                            opacity=".25" />
+                        <path
+                            d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z">
+                            <animateTransform attributeName="transform" type="rotate" dur="0.75s"
+                                values="0 12 12;360 12 12" repeatCount="indefinite" />
+                        </path>
+                    </svg>
+                </div>
+            </div>
+
+            <div ng-include="c.nav.getTemplate()"></div>
+            <div ng-include="c.getFooter()"></div>
+
+            <div ng-if="c.evalSubmitFlag">
+                <form name="submitModal" novalidate>
+                    <usa-modal id="force-modal" is-visible="c.evalSubmitFlag" aria-labelledby="force-modal-heading"
+                        aria-describedby="force-modal-description" variant="large" force-action="true">
+                        <usa-modal-header id="force-modal-heading">
+                            Want to Save Your Responses?
+                        </usa-modal-header>
+                        <usa-modal-body class="usa-prose modal-body">
+                            <div id="force-modal-description">
+
+                                <!-- Final nudge -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        Enter your organization email to save your responses and have them linked to
+                                        your
+                                        organization. Then follow the steps on the next page or come back later and
+                                        create
+                                        an
+                                        organization account using the same organization email to retrieve and track
+                                        your
+                                        questionnaire results over time.
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <usa-label for="modal_customer_email">
+                                            <strong>Organization Email</strong>
+                                        </usa-label>
+                                        <usa-hint>
+                                            A valid email is required to save and submit your response
+                                        </usa-hint>
+
+                                        <!-- Validation -->
+                                        <div class="red" aria-atomic="true" role="alert">
+                                            <p class="mb-0"
+                                                ng-if="submitModal.modal_customer_email.$dirty && !submitModal.modal_customer_email.$valid">
+                                                Error - Email is invalid</p>
+                                        </div>
+
+                                        <usa-text-input id="modal_customer_email" name="modal_customer_email"
+                                            type="email" ng-model="c.rscForm.customer_email"
+                                            ng-disabled="c.nav.isSummaryPage()">
+                                        </usa-text-input>
+                                    </div>
+                                </div>
+                            </div>
+                        </usa-modal-body>
+                        <usa-modal-footer>
+                            <usa-button-group>
+                                <usa-button-group-item>
+                                    <usa-button variant="primary" ng-click="c.submit()"
+                                        ng-disabled="c.rscForm.customer_email == '' || (!submitModal.modal_customer_email.$valid)">
+                                        Yes, save and submit
+                                    </usa-button>
+                                </usa-button-group-item>
+                                <usa-button-group-item>
+                                    <usa-button variant="outline" ng-click="c.submit(1)">
+                                        No, continue to summary
+                                    </usa-button>
+                                </usa-button-group-item>
+                            </usa-button-group>
+                        </usa-modal-footer>
+                    </usa-modal>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/ng-template" id="rsc_security_best_practices_wsm.html">
+<form class="ci-form-pad" name="security_practices" ng-keypress="($event.which===13)&&$event.preventDefault()"
+    novalidate>
+    <div id="rsc_security_best_practices_top" class="row">
+        <div class="col-md-8">
+            <h1 class="ci-h1">
+                Security Best Practices
+            </h1>
+        </div>
+        <div class="col-md-4 mt-22" ng-if="!c.nav.isSummaryPage()">
+            <div class="header-org">
+                <img id="template_header_org_src" src="{{c.org_image_src}}" />
+                <p class="dark-blue">
+                    {{c.template_header_org_size}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr class="horizontal-line" />
+        </div>
+    </div>
+
+    <!--Introduction Text-->
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="dark-blue">Introduction</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+
+            <p>ReadySetCyber questionnaire is designed to support your organization in creating a secure, resilient
+                cybersecurity environment. The questions are based on fundamental cybersecurity best practices and
+                designed to
+                provide you with tailored resources and guidance that are developed by CISA’s cybersecurity experts.</p>
+
+            <p style="white-space: pre-line;">Each question addresses a key area of protection to help you understand
+                and strengthen your organization’s cybersecurity foundation. For each <strong>"No/Unsure"</strong>
+                response, you will be immediately provided with recommended guidance and resources that you can begin
+                using right away or save for later action by using the "Print to PDF" option at the end of the
+                questionnaire:
+            </p>
+            <ul>
+                <li class="li-override">
+                    <strong>Understanding the Risk:</strong> Explain why this security measure is essential,
+                    with practical examples of the threats it addresses.
+                </li>
+                <li class="li-override">
+                    <strong>Recommended Actions:</strong> Provides clear steps you can take to improve
+                    security in this area, with tips tailored for small organizations. You can act on
+                    these recommendations
+                    immediately or save them for later by using the “Print to PDF” option at the end in the “Summary and
+                    Resources” page.
+                </li>
+                <li class="li-override">
+                    <strong>Featured Resource:</strong> Offers guidance from CISA experts to help you put
+                    these actions into practice. Make sure to bookmark the suggested resources below for easy reference.
+                </li>
+                <ul>
+                    <li class="li-override">
+                        <usa-link href="https://www.cisa.gov/cybersecurity-performance-goals-cpgs"
+                            target="_blank">Cross-Sector Cybersecurity Performance Goals (CPGs)</usa-link>:The baseline
+                        set of
+                        cybersecurity practices that businesses and critical infrastructure owners can take to protect
+                        themselves
+                        against cyber threats
+                    </li>
+                    <li class="li-override">
+                        <usa-link href="https://www.cisa.gov/secure-our-world" target="_blank">Secure Our
+                            World</usa-link>: Simple ways we can take every day to protect ourselves, our
+                        families, and our business from online threats
+                    </li>
+                    <li class="li-override">
+                        <usa-link href="https://www.cisa.gov/audiences/high-risk-communities/projectupskill"
+                            target="_blank">Project Upskill</usa-link>: Simple, how-to guides for high-risk communities
+                        to improve
+                        their cybersecurity
+                    </li>
+                    <li class="li-override">
+                        <usa-link href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+                            target="_blank">Known Exploited Vulnerability (KEV) Catalog</usa-link>: The authoritative
+                        source of
+                        vulnerabilities that have been exploited in the wild
+                    </li>
+                </ul>
+            </ul>
+
+        </div>
+    </div>
+    <!--End Introduction Text-->
+
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                Tooltips are available when you see the <i class="fa fa-question-circle-o" aria-hidden="true"></i> icon,
+                simply click on the icon to get more information.
+            </p>
+        </div>
+    </div>
+
+    <!-- Email -->
+    <div class="row question_box" ng-if="!c.data.isLoggedIn">
+        <div class="col-md-12">
+
+            <usa-label for="customer_email">
+                <strong>Want to Save Your Responses?</strong>
+            </usa-label>
+            <usa-hint>
+                Enter your organization email to link your responses. If you decide to create an organization account
+                later
+                using this email, you'll be able to retrieve and track your questionnaire results.
+            </usa-hint>
+
+            <!-- Validation -->
+            <div class="red" aria-atomic="true" role="alert">
+                <p class="mb-0"
+                    ng-if="security_practices.customer_email.$touched && !security_practices.customer_email.$valid">
+                    Error - Email is invalid</p>
+            </div>
+
+            <usa-text-input id="customer_email" name="customer_email" type="email" ng-model="c.rscForm.customer_email"
+                ng-disabled="c.nav.isSummaryPage()"></usa-text-input>
+
+        </div>
+    </div>
+    
+    <sp-widget widget="data.u_pw_different"></sp-widget>
+    <sp-widget widget="data.u_pw_strong"></sp-widget>
+    <sp-widget widget="data.u_mfa_enabled"></sp-widget>
+    <sp-widget widget="data.u_backup_data"></sp-widget>
+
+    <div ng-if="c.rscForm.elements.u_backup_data.value == 'yes'">
+        <sp-widget widget="data.u_backup_auto"></sp-widget>
+        <sp-widget widget="data.u_backup_access"></sp-widget>
+    </div>
+
+    <sp-widget widget="data.u_security_features"></sp-widget>
+    <sp-widget widget="data.u_fw_av"></sp-widget>
+    <sp-widget widget="data.u_disable_svcs"></sp-widget>
+    <sp-widget widget="data.u_software_updates"></sp-widget>
+    <sp-widget widget="data.u_trusted_software"></sp-widget>
+
+    <sp-widget widget="data.u_sm_inc_response_plan"></sp-widget>
+    <!--end questions-->
+</form>
+</script>
+
+
+
+
+
+
+
+
+<script type="text/ng-template" id="rsc_question_boolean.html">
+<div class="row question_box">
+    <div class="col-md-12" >
+        <h2 class="title">
+            {{c.questions[0].title}}
+        </h2>
+    </div>
+
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12 question">
+                <strong>
+                    <div ng-bind-html="c.questions[0].question">
+                    </div>
+                </strong>
+                <div class="pl-10" ng-if="c.questions[0].tooltip_body">
+                    <button class="tooltip-button" aria-label="Guidance for {{c.questions[0].title}}"
+                        href="#{{c.questions[0].sys_id}}_tooltip_modal" aria-controls="default-modal"
+                        ng-click="c.questions[0].defaultVisible = !c.questions[0].defaultVisible">
+                        <i id="{{c.questions[0].sys_id}}_tooltip" class="fa fa-question-circle tooltip-fa-color"
+                            aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <usa-modal id="{{c.questions[0].sys_id}}_tooltip_modal" is-visible="c.questions[0].defaultVisible"
+            aria-labelledby="default-modal-heading" aria-describedby="default-modal-description">
+            <usa-modal-body class="usa-prose">
+                <p id="default-modal-description" ng-bind-html="c.questions[0].tooltip_body"></p>
+            </usa-modal-body>
+        </usa-modal>
+
+
+        <usa-fieldset id="{{c.dual_radio.id}}_bordered">
+            <div class="responsive-radio">
+                <usa-radio ng-repeat="choice in c.dual_radio.choices">
+                    <usa-radio-input id="{{c.dual_radio.id}}_{{choice.value}}_bordered"
+                        name="{{c.dual_radio.id}}_value_bordered" ng-value="choice.value"
+                        ng-model="c.rscForm.elements[c.options.column_name].value" variant="tile"
+                        aria-label="{{c.question_label}}" ng-disabled="{{c.nav.isSummaryPage()}}"></usa-radio-input>
+                    <usa-radio-label for="{{c.dual_radio.id}}_{{choice.value}}_bordered">
+                        {{choice.displayValue}}
+                        <usa-radio-label-description ng-if="choice.description">
+                            {{choice.description}}
+                        </usa-radio-label-description>
+                    </usa-radio-label>
+                </usa-radio>
+            </div>
+        </usa-fieldset>
+
+    </div>
+
+
+    <div ng-if="c.rscForm.elements[c.options.column_name].value == 'no' && c.data.show_resource == '1'"
+        class="col-md-12 irf-pt-30 irf-pb-15">
+        <usa-accordion type="bordered" multiselectable="true">
+            <usa-accordion-item id="recommended_resources" role="heading" aria-level="2" is-open="true">
+                <usa-accordion-trigger id="{{c.data.sys_id}}_accordion"
+                    aria-label="Recommended Resources - {{c.question_label}}">
+                    Recommended Resources
+                </usa-accordion-trigger>
+                <usa-accordion-content>
+                    <div ng-include="c.data.template"></div>
+                </usa-accordion-content>
+            </usa-accordion-item>
+        </usa-accordion>
+    </div>
+</div>
+</script>

@@ -1,0 +1,1018 @@
+{
+  "alias": "93956773-dev",
+  "authAlias": "93956773-dev",
+  "shortName": "dev",
+  "instanceUrl": "https://dev.updateset.com",
+  "username": "geni.palla@updateset.com",
+  "productFamily": "australia",
+  "version": "glide-australia-02-11-2026__patch5w36-08-27-2026_09-01-2026_2120.zip",
+  "apps": [
+    {
+      "sysId": "00349185770223005d7b3882a910619d",
+      "name": "NLU Studio",
+      "scope": "sn_nlu_studio"
+    },
+    {
+      "sysId": "006683df70194c0497052ca59602580a",
+      "name": "@servicenow/now-vis-timeseries",
+      "scope": "sn_vis_timeseries"
+    },
+    {
+      "sysId": "0097719c3b0203008ed00d8044efc478",
+      "name": "Service Catalog - Service Workspace",
+      "scope": "sn_sc_workspace"
+    },
+    {
+      "sysId": "00f83ddcb4761e1d0c2b59f21f2c520e",
+      "name": "sn-app-analytics-center",
+      "scope": "sn_analytics_cen"
+    },
+    {
+      "sysId": "012fa9ad7367ad6393ae5dea97af6f65",
+      "name": "Mobile Card Builder",
+      "scope": "sn_mobile_card_bui"
+    },
+    {
+      "sysId": "0158b083b75304103a2e2397ee11a9ce",
+      "name": "Product Model and Catalog Items Relationship",
+      "scope": "sn_prod_cat_rel"
+    },
+    {
+      "sysId": "015dd2fa796d247253ef940e685b9ebd",
+      "name": "now-list-commons",
+      "scope": "sn_now_list_common"
+    },
+    {
+      "sysId": "01840b01836c0acf70db93c6aef3f8e1",
+      "name": "Kanban board component",
+      "scope": "sn_visual_board"
+    },
+    {
+      "sysId": "019810c1349d2426505ca04b513baf4b",
+      "name": "sn-component-checklist",
+      "scope": "sn_component_check"
+    },
+    {
+      "sysId": "01dc576795c116892f74ca4bcf21d627",
+      "name": "@servicenow/now-highlighted-value",
+      "scope": "sn_highlighted_val"
+    },
+    {
+      "sysId": "01ebede3c3212010a3a6ddaa7d40dd94",
+      "name": "Team Contacts App Template",
+      "scope": "sn_team_contacts_0"
+    },
+    {
+      "sysId": "01f2fbe57fd60ce6cb55bc603c8d320a",
+      "name": "@devsnc/sn-ihub-pill",
+      "scope": "sn_ihub_pill"
+    },
+    {
+      "sysId": "020538d94381e110a878634a1bb8f229",
+      "name": "Beans.ai Spoke",
+      "scope": "sn_beans_ai_spoke"
+    },
+    {
+      "sysId": "02953c6126383d94f902bb4153d584c0",
+      "name": "Spoke Generator",
+      "scope": "sn_spoke_builder"
+    },
+    {
+      "sysId": "02a69a840fa5e468348eb11ccc16e3fa",
+      "name": "@servicenow/now-vis-dial",
+      "scope": "sn_vis_dial"
+    },
+    {
+      "sysId": "02c701a889425bfb92440bb5c1e65980",
+      "name": "sn-da-filter-group-config-panel",
+      "scope": "sn_dafltrcnf_pan"
+    },
+    {
+      "sysId": "032ba5b8614f0110654df4ebc0d811b6",
+      "name": "ServiceNow Key Management Framework UI",
+      "scope": "sn_kmf_ui"
+    },
+    {
+      "sysId": "0369324a8cc292554b780153afd7c895",
+      "name": "@servicenow/now-checkbox",
+      "scope": "sn_checkbox"
+    },
+    {
+      "sysId": "037af9d315d8166f633d053009d4d732",
+      "name": "@devsnc/sn-gw-wrapper",
+      "scope": "sn_gw_wrapper"
+    },
+    {
+      "sysId": "03ae1c8b062853debbc9916820d5aa18",
+      "name": "@devsnc/sn-gw-file-uploader",
+      "scope": "sn_gw_file_upload"
+    },
+    {
+      "sysId": "03d0387dc6ae969539d083379f0a8143",
+      "name": "sn-component-chat-window",
+      "scope": "sn_component_chat_"
+    },
+    {
+      "sysId": "04eea8aa8916754c4dd16baadd88d925",
+      "name": "UI Framework on Next Experience",
+      "scope": "sn_nxui_framework"
+    },
+    {
+      "sysId": "0525083f0a3e22e46a97d0bd424d8c27",
+      "name": "sn-dashboards-view",
+      "scope": "sn_dashboards_view"
+    },
+    {
+      "sysId": "053150b00b653010aa0cafd748e23369",
+      "name": "Instance Security Center",
+      "scope": "sn_isc_core"
+    },
+    {
+      "sysId": "0545df78ff89b21061e2ffffffffff1c",
+      "name": "Customer Service Portal Base",
+      "scope": "sn_csm_portal_base"
+    },
+    {
+      "sysId": "058c93360d47670836bcdf6e4c511aa8",
+      "name": "Document display component",
+      "scope": "sn_doc_display"
+    },
+    {
+      "sysId": "05b59658b7332300ce53d818ee11a9eb",
+      "name": "Microsoft Teams Graph Spoke",
+      "scope": "sn_msteams_ahv2"
+    },
+    {
+      "sysId": "05bf96091b2245107cc3ec26b04bcb73",
+      "name": "Process Automation Content",
+      "scope": "sn_pad_content"
+    },
+    {
+      "sysId": "06200923d27c00c52f4698f7535296ae",
+      "name": "sn-component-carousel",
+      "scope": "sn_component_carou"
+    },
+    {
+      "sysId": "065d74986da81e307aeb989e240ca159",
+      "name": "@devsnc/sn-gw-checkbox-tooltip",
+      "scope": "sn_gw_chxbxtooltip"
+    },
+    {
+      "sysId": "06e4ef0d87130300ada4046787cb0b08",
+      "name": "ITSM Workspace",
+      "scope": "sn_itsm_workspace"
+    },
+    {
+      "sysId": "06fabe3330f68ef2344bffa82e4cc5e1",
+      "name": "@servicenow/now-record-list-connected",
+      "scope": "sn_record_list_con"
+    },
+    {
+      "sysId": "072a714493acce1003a6fc4e1dba107d",
+      "name": "External Credential Storage and Management Application",
+      "scope": "sn_mid_extcredstrg"
+    },
+    {
+      "sysId": "078e8020950f12a215a92e8ad9b346e0",
+      "name": "@devsnc/sn-catalog-action",
+      "scope": "sn_sc_action"
+    },
+    {
+      "sysId": "07f2b49d578323006e04aa65ef94f947",
+      "name": "Skill Determination",
+      "scope": "sn_skill_rule"
+    },
+    {
+      "sysId": "081999c042687d3c234253fc5e0332bc",
+      "name": "@servicenow/sn-banner-announcement",
+      "scope": "sn_banner_list"
+    },
+    {
+      "sysId": "08450324c3d07010912d89bc2840dd05",
+      "name": "Attribute propagation",
+      "scope": "sn_attr_prp_mgmt"
+    },
+    {
+      "sysId": "08ca765153ed5010a86dddeeff7b1277",
+      "name": "Enterprise Service Management Integrations Framework",
+      "scope": "sn_hr_integr_fw"
+    },
+    {
+      "sysId": "0986fd7fbf2e4084cf078d41e522b614",
+      "name": "@servicenow/now-typeahead",
+      "scope": "sn_typeahead"
+    },
+    {
+      "sysId": "09bedda52fd1035209ba32642a5e1c39",
+      "name": "sn-nlq-query-input",
+      "scope": "sn_nlq_query_input"
+    },
+    {
+      "sysId": "0a4f6cf9662378054b5bfa12c3a87f3c",
+      "name": "@servicenow/now-record-time",
+      "scope": "sn_record_time"
+    },
+    {
+      "sysId": "0aa1393093213100ae6e941e867ffb40",
+      "name": "Scoped App Creator",
+      "scope": "sn_appcreator"
+    },
+    {
+      "sysId": "0af3aa25ff322210f13dffffffffff03",
+      "name": "Telemetry Configuration",
+      "scope": "sn_telemetry_conf"
+    },
+    {
+      "sysId": "0b41714a7a0d4af6986feb2528cd8b16",
+      "name": "geni",
+      "scope": "global"
+    },
+    {
+      "sysId": "0b5f1086c3f904a0b3ccc771e5fa5d40",
+      "name": "@now-par-components/sn-par-popover",
+      "scope": "sn_par_popover"
+    },
+    {
+      "sysId": "0b635a8633ea2a50dfa2f432cd5c7b8d",
+      "name": "Store Demo Data",
+      "scope": "x_upse_store_dem_0"
+    },
+    {
+      "sysId": "0bc511a1dee3dd0f75831d56a265b2f1",
+      "name": "@devsnc/sn-hierarchical-select",
+      "scope": "sn_hierarchical_se"
+    },
+    {
+      "sysId": "0bef1010f754c51689f32c32549c642c",
+      "name": "@servicenow/now-template-card",
+      "scope": "sn_template_card"
+    },
+    {
+      "sysId": "0ca320d31bb08e10047a0ed5624bcbb4",
+      "name": "Ready Set Cyber",
+      "scope": "x_g_dhs_rsc"
+    },
+    {
+      "sysId": "0cf1f6ed1b0b79105e14b8449b4bcb5c",
+      "name": "Compare Tool",
+      "scope": "x_snc_compare_tool"
+    },
+    {
+      "sysId": "0d059f363dd151f00757ed04b00c5997",
+      "name": "@devsnc/sn-uibtk-features-catalog-modal",
+      "scope": "sn_uibtk_features_"
+    },
+    {
+      "sysId": "0d20c5828f44fbbd5761b99d9cc1d57e",
+      "name": "@devsnc/sn-uibtk-shelf-pane",
+      "scope": "sn_uibtk_shlf_pane"
+    },
+    {
+      "sysId": "0d2383dd53687510b256ddeeff7b12b8",
+      "name": "Task Communications Management UI Components for Configurable Workspaces",
+      "scope": "sn_uib_tcm"
+    },
+    {
+      "sysId": "0d30eeec77eb2300454792718a106177",
+      "name": "Webviews for mobile",
+      "scope": "sn_me_webview"
+    },
+    {
+      "sysId": "0d4d033597cd5110269b728c1253affe",
+      "name": "Customer Service Portal",
+      "scope": "sn_csm_portal"
+    },
+    {
+      "sysId": "0d5bb8b9730303004ab2369f2ef6a737",
+      "name": "Virtual Agent Web Client",
+      "scope": "sn_va_web_client"
+    },
+    {
+      "sysId": "0d7ef44ecb5cd56d0a9ce3cc094fbd69",
+      "name": "@devsnc/sn-uibtk-stage-element-controls",
+      "scope": "sn_uibtk_stage_ele"
+    },
+    {
+      "sysId": "0dcb447e9b040ce9c36d00bb84bc8b08",
+      "name": "@servicenow/now-activity-stream-common",
+      "scope": "sn_activity_common"
+    },
+    {
+      "sysId": "0de8325068268be3a18bdbf2d33a35da",
+      "name": "@devsnc/sn-options-list",
+      "scope": "sn_options_list"
+    },
+    {
+      "sysId": "0df627acf20e21d38a3d8ee131f01beb",
+      "name": "@servicenow/now-grid",
+      "scope": "sn_now_grid"
+    },
+    {
+      "sysId": "0e3ce947b7f268296352af6f4ef65ddb",
+      "name": "sn-common-voice-ui",
+      "scope": "sn_common_voice_ui"
+    },
+    {
+      "sysId": "0e65f978134df6008a6d3d7ed144b08d",
+      "name": "MapAnything",
+      "scope": "x_mpany_core"
+    },
+    {
+      "sysId": "0e9a15cc4320861016817a372ab8f2de",
+      "name": "ITSM Analytics",
+      "scope": "sn_itsm_analytics"
+    },
+    {
+      "sysId": "0ed05f74ace85901a80c4be40aa8e02c",
+      "name": "Checklist component",
+      "scope": "sn_now_checklist"
+    },
+    {
+      "sysId": "0eef12637311301045216238edf6a75e",
+      "name": "Service Operations Workspace ITSM Common",
+      "scope": "sn_sow_itsm_common"
+    },
+    {
+      "sysId": "0efe46d8e4259e584faf352e99dca9ae",
+      "name": "AES Role Builder Component",
+      "scope": "sn_aes_role_build"
+    },
+    {
+      "sysId": "0f6ab99a0f36060094f3c09ce1050ee8",
+      "name": "Global",
+      "scope": "global"
+    },
+    {
+      "sysId": "0fdd6483d72302004f1e82285e61033a",
+      "name": "Targeted Communications",
+      "scope": "sn_publications"
+    },
+    {
+      "sysId": "10504991430431101326810d0bb8f223",
+      "name": "Resource Management Workspace",
+      "scope": "sn_rm_ws"
+    },
+    {
+      "sysId": "10572c07a38b44bd802a17d7b4f45928",
+      "name": "@devsnc/sn-uibtk-props-pane",
+      "scope": "sn_uibtk_props_pan"
+    },
+    {
+      "sysId": "1078638e2c801ad551c40674ed1a36b0",
+      "name": "In-Product Survey",
+      "scope": "sn_ip_survey"
+    },
+    {
+      "sysId": "10c4084a74aab9880340c107adb74daa",
+      "name": "sn-da-filter-group",
+      "scope": "sn_da_filter_group"
+    },
+    {
+      "sysId": "11407e5636bc98baf44fe4b5e22bafbe",
+      "name": "@devsnc/sn-record-nowassist",
+      "scope": "sn_rec_nowassist"
+    },
+    {
+      "sysId": "11609c8645ed25503b288edf14e97fe4",
+      "name": "@devsnc/sn-mfa-validate",
+      "scope": "sn_mfa_validate"
+    },
+    {
+      "sysId": "11610db9dad5ddd1feb5f530dab5932f",
+      "name": "@devsnc/sn-layout",
+      "scope": "sn_uxf_layout"
+    },
+    {
+      "sysId": "1163fa730f102010e8c940c1df767e8c",
+      "name": "Admin Center",
+      "scope": "sn_admin_center"
+    },
+    {
+      "sysId": "116703c19f200300af7196fcc67fcf17",
+      "name": "Connect Spoke",
+      "scope": "sn_connect_ah"
+    },
+    {
+      "sysId": "11722b01473231007f47563dbb9a7154",
+      "name": "Social Knowledge",
+      "scope": "sn_kb_social_qa"
+    },
+    {
+      "sysId": "11879041532030103913ddeeff7b12d8",
+      "name": "Goal Framework",
+      "scope": "sn_gf"
+    },
+    {
+      "sysId": "1197b1527720330030e8528069106172",
+      "name": "Microsoft Azure Translator Service Spoke",
+      "scope": "sn_ms_trans_spoke"
+    },
+    {
+      "sysId": "12287edb537c301037daddeeff7b12cf",
+      "name": "Digital Signature API",
+      "scope": "sn_ds_api"
+    },
+    {
+      "sysId": "1270dd32ed84573111a4d4988da9aadb",
+      "name": "@servicenow/now-code-editor",
+      "scope": "sn_now_code_editor"
+    },
+    {
+      "sysId": "1293c996ad48c7d88400c13afef3cdff",
+      "name": "Process Automation Designer",
+      "scope": "sn_pa_designer"
+    },
+    {
+      "sysId": "12f5a39a6787b9a083515d812bf82e49",
+      "name": "sn-app-par-components-info-panel",
+      "scope": "sn_par_info_panel"
+    },
+    {
+      "sysId": "136453f01a7188292b179944baea19c3",
+      "name": "Notification Advanced Preferences",
+      "scope": "sn_unif_nav_pref"
+    },
+    {
+      "sysId": "13aa96a16bcefa78b16cc99ed9e4f1f4",
+      "name": "Decision Table Builder",
+      "scope": "sn_decision_table"
+    },
+    {
+      "sysId": "13d29a7835d6aa1b009fde30a80a413f",
+      "name": "sn-casetypes-selector",
+      "scope": "sn_casetypes_selec"
+    },
+    {
+      "sysId": "13eaf17b4f5df8ce65417486f46b6c2f",
+      "name": "@servicenow/sn-cb-usage",
+      "scope": "sn_cb_usage"
+    },
+    {
+      "sysId": "13f82d59fad128f947b961972d2ccd14",
+      "name": "sn-timer",
+      "scope": "sn_timer"
+    },
+    {
+      "sysId": "1413ad1f928681642b2f3ad115fd41b8",
+      "name": "Audio player component",
+      "scope": "sn_audio_player"
+    },
+    {
+      "sysId": "1447b3edf3f9852f9eca12a17b4e62b8",
+      "name": "@servicenow/now-sla-timer",
+      "scope": "now-sla-timer"
+    },
+    {
+      "sysId": "1455a5103df039f5601d0b82e1cbd62a",
+      "name": "sn-component-file-icon",
+      "scope": "sn_file_icon"
+    },
+    {
+      "sysId": "146c3999fff47cf0ba4fb113b3d1da65",
+      "name": "AES Application Object Wizard Components",
+      "scope": "sn_wzd_components"
+    },
+    {
+      "sysId": "14eb9da8c3f310102986a81c8640dd08",
+      "name": "IT Service Management for Microsoft 365",
+      "scope": "sn_now_teams_it"
+    },
+    {
+      "sysId": "1543968633ea2a50dfa2f432cd5c7bac",
+      "name": "Store",
+      "scope": "x_upse_store"
+    },
+    {
+      "sysId": "158766662b187a102684ff7cf291bf55",
+      "name": "Assignment Workbench",
+      "scope": "sn_assign_wb"
+    },
+    {
+      "sysId": "15dd7557a36fab62db809f577a249b1a",
+      "name": "sn-par-filter-config-datasource",
+      "scope": "sn_parfltr_cnf_ds"
+    },
+    {
+      "sysId": "15ec588bcdcbf2eba5413a2c5a7820e3",
+      "name": "sn-nlq-analytics",
+      "scope": "sn_nlq_analytics"
+    },
+    {
+      "sysId": "16950f38cb5a3daf196aaf884386ef97",
+      "name": "Conversational Studio",
+      "scope": "sn_convo_studio"
+    },
+    {
+      "sysId": "1696ce244c85dd6248bf333af252c2fa",
+      "name": "@now-par-components/sn-par-metricbase",
+      "scope": "sn_par_metricbase"
+    },
+    {
+      "sysId": "17e903a79653e3385899e6e73b3dcfff",
+      "name": "@devsnc/sn-uibtk-element-context-menu",
+      "scope": "sn_uibtk_element_c"
+    },
+    {
+      "sysId": "18351d53eb32120034d1eeea1206fe79",
+      "name": "Change Management - CAB Workbench",
+      "scope": "sn_change_cab"
+    },
+    {
+      "sysId": "1860b0837a58e134f34c7088498fbc1c",
+      "name": "@devsnc/sn-kb-shortcuts",
+      "scope": "sn_kb_shortcuts"
+    },
+    {
+      "sysId": "1872ee045b100110ab933520b881c727",
+      "name": "FDIH Dashboard",
+      "scope": "sn_fdih_dashboards"
+    },
+    {
+      "sysId": "1892de6953421010fa75ddeeff7b1268",
+      "name": "Microsoft Integrations - Core",
+      "scope": "sn_now_teams"
+    },
+    {
+      "sysId": "18bf93a27f1212104536895a1d866586",
+      "name": "Inbound API Integration Usage",
+      "scope": "sn_integration_use"
+    },
+    {
+      "sysId": "18e849d169284372d77ad961ee8fa009",
+      "name": "AES Catalog Builder Wizard",
+      "scope": "sn_aes_catalog_wzd"
+    },
+    {
+      "sysId": "199e106697495110269b728c1253af3d",
+      "name": "Consumer Service Portal",
+      "scope": "sn_csp_portal"
+    },
+    {
+      "sysId": "19b40605edae411005e8007f82757635",
+      "name": "Document Intelligence",
+      "scope": "sn_docintel"
+    },
+    {
+      "sysId": "1a6b6a17c3323010bc0526083c40dd00",
+      "name": "Product Catalog Advanced",
+      "scope": "sn_prd_pm_adv"
+    },
+    {
+      "sysId": "1ae06f355710130034d169202d94f92e",
+      "name": "Change Management - Color Picker",
+      "scope": "sn_chg_soc_cp"
+    },
+    {
+      "sysId": "1ae3c8a3c3221200f25d174292d3aea3",
+      "name": "Delegated Dev User Administration",
+      "scope": "sn_dd_user_admin"
+    },
+    {
+      "sysId": "1b25811e43c8897cc451a0aa4172a2a0",
+      "name": "@servicenow/now-stylized-text",
+      "scope": "sn_stylized_text"
+    },
+    {
+      "sysId": "1b68a24f1ea12a4bd279ddc07be4f1e3",
+      "name": "@devsnc/library-uibtk-uxvalue",
+      "scope": "sn_uibtk_ux_value"
+    },
+    {
+      "sysId": "1bc6c2d3db92220004997878f0b8f571",
+      "name": "Benchmark Common",
+      "scope": "sn_bm_common"
+    },
+    {
+      "sysId": "1bedd80afdf4872ba80260297cc7b819",
+      "name": "@devsnc/sn-record-email",
+      "scope": "sn_record_email"
+    },
+    {
+      "sysId": "1c3f9f936741030032468aaad485efda",
+      "name": "Performance Analytics - Enhanced UI",
+      "scope": "sn_pa_ui"
+    },
+    {
+      "sysId": "1c53db6a0c96b7df9ff3b72e3d3e7a5e",
+      "name": "sn-app-par-components-share-info",
+      "scope": "sn_par_share_info"
+    },
+    {
+      "sysId": "1ca5f77e37842fe38304432b3f75e983",
+      "name": "@servicenow/now-tooltip",
+      "scope": "sn_tooltip"
+    },
+    {
+      "sysId": "1cb77a801b9af01039c155f3604bcb9e",
+      "name": "Guided Setup",
+      "scope": "sn_ads_setup"
+    },
+    {
+      "sysId": "1cc6c59e46a827c01de2d834785cb250",
+      "name": "sn-platform-email-client",
+      "scope": "sn_platform_email"
+    },
+    {
+      "sysId": "1ccc514914f9914b0daf263369cfe648",
+      "name": "@servicenow/now-list-menu",
+      "scope": "sn_list_menu"
+    },
+    {
+      "sysId": "1cd4788cf4a856a51963129248877c23",
+      "name": "@devsnc/sn-record-file-attachment",
+      "scope": "sn_record_file"
+    },
+    {
+      "sysId": "1cf7ad026abf3abab12e761ddaa6e9df",
+      "name": "Diagram Builder",
+      "scope": "sn_diagram_builder"
+    },
+    {
+      "sysId": "1da803b9b3b10300f686a72256a8dcbc",
+      "name": "Walk-up Experience",
+      "scope": "sn_walkup"
+    },
+    {
+      "sysId": "1e72b4717be4fd6620166e7d487547ff",
+      "name": "@devsnc/sn-catalog-price",
+      "scope": "sn_sc_price"
+    },
+    {
+      "sysId": "1e95bac2738f001001b566b90ff6a7cd",
+      "name": "Employee Profile",
+      "scope": "sn_employee"
+    },
+    {
+      "sysId": "1f0db3fb949e1cb52e350df15969dda6",
+      "name": "Usage Insights Query Builder",
+      "scope": "sn_uxa_qb"
+    },
+    {
+      "sysId": "1f97b7d0702fc210f87703d7c8bbaf2c",
+      "name": "Email Interaction for CSM",
+      "scope": "sn_eaai_csm"
+    },
+    {
+      "sysId": "1fadec2e771a10102c30945caa106130",
+      "name": "CSM Configurable Workspace",
+      "scope": "sn_csm_wrkspc"
+    },
+    {
+      "sysId": "1fce1c6473ab101021461f477bf6a771",
+      "name": "Openframe Integration Store App",
+      "scope": "sn_openframe_intg"
+    },
+    {
+      "sysId": "1fd83e4d74ede810ecb540a9266dd545",
+      "name": "@devsnc/sn-search-results-container",
+      "scope": "sn_search_results"
+    },
+    {
+      "sysId": "2028fe718b11c8f32122c6da3b496a83",
+      "name": "Configuration Hub",
+      "scope": "sn_config_hub"
+    },
+    {
+      "sysId": "203ee42d1a47d22a077aaec9ab117dab",
+      "name": "sn-pill-field",
+      "scope": "sn_pill_field"
+    },
+    {
+      "sysId": "204773b4b3865010a9dce6e316a8dc26",
+      "name": "CSM Contributor User",
+      "scope": "sn_contributor"
+    },
+    {
+      "sysId": "2075d727af5415754890fa6ae3ca42ac",
+      "name": "Calendar component",
+      "scope": "sn_calendar"
+    },
+    {
+      "sysId": "20c81732ad068094f0531873a53605dc",
+      "name": "@devsnc/sn-glide-query-base",
+      "scope": "sn_glide_query_bas"
+    },
+    {
+      "sysId": "214622670b571300c9c86c9037673a6f",
+      "name": "Action Status Automation",
+      "scope": "sn_action_status"
+    },
+    {
+      "sysId": "21d5e77677171110638cfe21fe5a993c",
+      "name": "Access Analyzer",
+      "scope": "sn_access_analyzer"
+    },
+    {
+      "sysId": "21ea9ae47301230083511c86fbf6a71d",
+      "name": "Knowledge Management - Guided Setup",
+      "scope": "sn_km_guided_setup"
+    },
+    {
+      "sysId": "21f30bcdb7d03300d1dcf8b8ee11a9eb",
+      "name": "ML UI",
+      "scope": "sn_ml_ui"
+    },
+    {
+      "sysId": "221bb32e080c0deb826d365ec9bcc398",
+      "name": "@servicenow/now-vis-boxplot",
+      "scope": "sn_vis_boxplot"
+    },
+    {
+      "sysId": "2263a68187032300e0ef0cf888cb0b3f",
+      "name": "Service Catalog for mobile",
+      "scope": "sn_scmobile"
+    },
+    {
+      "sysId": "2290bab1eb4e3010e0ef83c45e5228b5",
+      "name": "Walk-up Experience for Service Operations Workspace",
+      "scope": "sn_sow_walkup"
+    },
+    {
+      "sysId": "22d9a1a70b5323008401818393673a16",
+      "name": "SMS Preferences",
+      "scope": "sn_sms_pref"
+    },
+    {
+      "sysId": "230016d573131300ee4dd3c72bf6a7cd",
+      "name": "CMDB Agent Workspace",
+      "scope": "sn_cmdb_workspace"
+    },
+    {
+      "sysId": "23364660c3b31010aab55b79c840ddc2",
+      "name": "HR Service Delivery for Microsoft 365",
+      "scope": "sn_now_teams_hr"
+    },
+    {
+      "sysId": "234ba2a72dbec46f8d354090e04f1903",
+      "name": "@servicenow/now-vis-navigator",
+      "scope": "sn_vis_navigator"
+    },
+    {
+      "sysId": "23510f0eed605fd17ff9ccddb9782406",
+      "name": "@devsnc/sn-uibtk-json-navigator",
+      "scope": "sn_uibtk_json_nav"
+    },
+    {
+      "sysId": "236addd4d75048c1a5f250d73c064976",
+      "name": "Employee Center Pro",
+      "scope": "sn_ex_sp_pro"
+    },
+    {
+      "sysId": "239abdfe9ff4121032337277da0a1ca9",
+      "name": "Data Foundation Model",
+      "scope": "sn_cmdb_foundation"
+    },
+    {
+      "sysId": "23d96fa159d9647b3cd20e38706c6954",
+      "name": "@servicenow/now-data-set",
+      "scope": "now_data_set"
+    },
+    {
+      "sysId": "23ded90d1eadbd145987f952e9f6c97b",
+      "name": "@devsnc/sn-uibtk-domain-picker",
+      "scope": "sn_uibtk_domain_pi"
+    },
+    {
+      "sysId": "240cca95336a5210dfa2f432cd5c7bc4",
+      "name": "USWDS Demo",
+      "scope": "x_upse_uswds_demo"
+    },
+    {
+      "sysId": "241ed685c32ef4aae2af77df7ec950da",
+      "name": "@servicenow/sn-window-manager",
+      "scope": "sn_now_window_mngr"
+    },
+    {
+      "sysId": "2437c8e2b731011008341664de11a9ba",
+      "name": "sn-app-kpi-details",
+      "scope": "sn_app_kpi_details"
+    },
+    {
+      "sysId": "262bfc14e0be488fa62947c413fcf1d0",
+      "name": "MID Server Infrastructure",
+      "scope": "sn_mid_infra"
+    },
+    {
+      "sysId": "26329d35f52d4510f877c32d14052947",
+      "name": "Sitemap Generator",
+      "scope": "sn_ux_seo_sitemap"
+    },
+    {
+      "sysId": "264259f1c30320101e6b79222840ddc7",
+      "name": "ServiceWorker Manager",
+      "scope": "sn_serviceworker_m"
+    },
+    {
+      "sysId": "2672eb267c3e8d16d6c612c30425e79f",
+      "name": "@servicenow/now-record-number",
+      "scope": "sn_record_number"
+    },
+    {
+      "sysId": "26ace622b3930010700b4d43c6a8dcd3",
+      "name": "Customer Household Data Model",
+      "scope": "sn_csm_household"
+    },
+    {
+      "sysId": "2790338ee7935660810510f8d97befd5",
+      "name": "@now-par-components/sn-par-metrics",
+      "scope": "sn_par_metrics"
+    },
+    {
+      "sysId": "27b568be53b11010d4f9ddeeff7b12c5",
+      "name": "CSM and FSM Configurable Workspace Foundation",
+      "scope": "sn_cwf_wrkspc"
+    },
+    {
+      "sysId": "27cb8f3249733c04768836ad4e145cdf",
+      "name": "sn-component-va-web-client",
+      "scope": "sn-va-web-client"
+    },
+    {
+      "sysId": "27e57a94e0dde39cdf6c5167db00bd42",
+      "name": "sn-app-par-components-chart-drilldown-configuration",
+      "scope": "sn_c2c_config"
+    },
+    {
+      "sysId": "28333d14059c5684337f7c65adf7e315",
+      "name": "@devsnc/library-uibtk-caching",
+      "scope": "sn_uibtk_caching"
+    },
+    {
+      "sysId": "2841445da27ce98536654b3edbf8abca",
+      "name": "sn-pa-target-form-connected",
+      "scope": "sn_patargetformcon"
+    },
+    {
+      "sysId": "284c35195bf9198f084ee79a76e157b9",
+      "name": "AES Notification Builder Component",
+      "scope": "sn_aes_notificatio"
+    },
+    {
+      "sysId": "28a663699f894ce53cd96e6a00dfe3a7",
+      "name": "@devsnc/sn-user-preferences-modal",
+      "scope": "user_preference_mo"
+    },
+    {
+      "sysId": "28b526d23baf7650ceb02a1c95e45a04",
+      "name": "urmom",
+      "scope": "global"
+    },
+    {
+      "sysId": "2905bd74e349b27767175d25e191f34d",
+      "name": "Usage Insights Application",
+      "scope": "sn_uxa_dashboard"
+    },
+    {
+      "sysId": "2926d7e8a2ac632a750a9c9101f4cff0",
+      "name": "Data visualizations",
+      "scope": "sn_par_vis_base"
+    },
+    {
+      "sysId": "29538905846d3836694a5844ec22a359",
+      "name": "@servicenow/now-alert",
+      "scope": "sn_alert"
+    },
+    {
+      "sysId": "2a1eec30c30f20109fe6a0f89d40dd57",
+      "name": "Header App Shell",
+      "scope": "sn_header_appshell"
+    },
+    {
+      "sysId": "2a2785427e4c429cb9f7c8a8b475e6f1",
+      "name": "AI Experience Framework",
+      "scope": "sn_aixf"
+    },
+    {
+      "sysId": "2b017207a3b80110e355f99246fcda3f",
+      "name": "AES Decision Table Builder Templates",
+      "scope": "sn_dtbl_bldr_tmpls"
+    },
+    {
+      "sysId": "2b2a6075a85fac792826182c000cb940",
+      "name": "@servicenow/now-stylized-text",
+      "scope": "uxf_stylized_text"
+    },
+    {
+      "sysId": "2b3a837a0bb732007a0e41d6f6673a7f",
+      "name": "Agent Workspace",
+      "scope": "sn_agent_workspace"
+    },
+    {
+      "sysId": "2b609340fd949f5c8a55925ecaa691e4",
+      "name": "Meeting Watcher - UI Builder Data Resource",
+      "scope": "sn_mtg_watcher"
+    },
+    {
+      "sysId": "2b6f4c5f1449ff08bb9c54755daf2cf8",
+      "name": "@servicenow/now-activity-stream",
+      "scope": "sn_activity_stream"
+    },
+    {
+      "sysId": "2bad0b9ed9e71d003216a75b6e132c86",
+      "name": "@devsnc/sn-record-checkbox-group",
+      "scope": "sn_record_cb_group"
+    },
+    {
+      "sysId": "2c29a33433077a10dfa2f432cd5c7b04",
+      "name": "ERD",
+      "scope": "x_upse_erd"
+    },
+    {
+      "sysId": "2c5cab6af9114310f87766bb07c49066",
+      "name": "App AutoUpgrade Client",
+      "scope": "sn_app_auto_upgr"
+    },
+    {
+      "sysId": "2c7ab9f4879023003c1c8467a7cb0b6b",
+      "name": "Customer Service with Request Management",
+      "scope": "sn_cs_sm_request"
+    },
+    {
+      "sysId": "2cc75fa8470031101ea871dc416d433c",
+      "name": "PAR CoreUI Migration Scripts",
+      "scope": "sn_par_cor_mig_spt"
+    },
+    {
+      "sysId": "2cd0f9372ba0738b89fd1f2e4d05e325",
+      "name": "@devsnc/sn-search-result-evam-card",
+      "scope": "sn_search_res_card"
+    },
+    {
+      "sysId": "2d167480cd6d5210f877e03aac875521",
+      "name": "Email Interaction Core",
+      "scope": "sn_eaai_core"
+    },
+    {
+      "sysId": "2d310d5d3cd7f5751b99938a1598385f",
+      "name": "@devsnc/sn-record-user-roles-lookup-connected",
+      "scope": "sn_record_user_rol"
+    },
+    {
+      "sysId": "2d3597c80b67320036e62c7885673a43",
+      "name": "Templated Snippets",
+      "scope": "sn_templated_snip"
+    },
+    {
+      "sysId": "2d52c159338c1210dfa2f432cd5c7b10",
+      "name": "Portal",
+      "scope": "x_upse_portal"
+    },
+    {
+      "sysId": "2d69d8e22dfbb10b5a9a1d3eddc57c4e",
+      "name": "@servicenow/now-dropdown",
+      "scope": "sn_dropdown"
+    },
+    {
+      "sysId": "2d9f8348352aed5cdfcf3ec28b6d570f",
+      "name": "@devsnc/sn-uibtk-events-pane",
+      "scope": "sn_uibtk_events_pa"
+    },
+    {
+      "sysId": "2dc0d1b643ca68bd1eead115d494c946",
+      "name": "Data Grid UI Component",
+      "scope": "sn_datagrid"
+    },
+    {
+      "sysId": "2dee24988657dac3c68fd82730acf364",
+      "name": "@devsnc/sn-uibtk-draggable-dialog",
+      "scope": "sn_uibtk_draggable"
+    },
+    {
+      "sysId": "2e03f010eba074afda7a59c4753316a1",
+      "name": "sn-app-par-components-dashboard-categories",
+      "scope": "sn_dash_categories"
+    },
+    {
+      "sysId": "2e77d2ecf523ee54f877e8fd7f61853f",
+      "name": "MID Admin Workspace",
+      "scope": "sn_mid_admin_ws"
+    },
+    {
+      "sysId": "2e831743afbe5118d1b0b3309741961f",
+      "name": "@devsnc/sn-gw-info-summary",
+      "scope": "sn_gw_infosummary"
+    },
+    {
+      "sysId": "2eaca9dc7b200a3909b93da12eed1a99",
+      "name": "sn-integrationhub-designer",
+      "scope": "sn_ihub_designer"
+    },
+    {
+      "sysId": "2ee162fa2812cd8f00b4cb7db0b60aa5",
+      "name": "@servicenow/sn-cb-commons",
+      "scope": "sn_cb_commons"
+    },
+    {
+      "sysId": "2f76a553d71b88f056d46d5e803f448d",
+      "name": "@devsnc/sn-record-price-connected",
+      "scope": "sn_record_price_co"
+    },
+    {
+      "sysId": "7cff490f87ebf1106fa97627cebb3585",
+      "name": "CISA VM Ready Set Cyber",
+      "scope": "x_g_dhs_cisa_vm_re"
+    }
+  ],
+  "app_sys_id": "7cff490f87ebf1106fa97627cebb3585",
+  "application_scope": "x_g_dhs_cisa_vm_re"
+}

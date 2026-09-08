@@ -1,0 +1,69 @@
+<!-- pg0 -->
+<div ng-if="c.view != 'charlie'">
+    <div id="cyhy_enrollment_landing_top" class="row pb-2">
+    </div>
+
+    <!-- ADMIN Only Page nav -->
+    <!-- <div ng-if="true" class="row mb-8 p-8 bg-white-shadow">
+        <div class="col-md-12">
+
+            <div class="row pb-4">
+                <div class="col-md-12">
+                    <usa-label>
+                        <strong>For demo purposes only: Select View</strong>
+                    </usa-label>
+
+                    <usa-select ng-model="c.view">
+                        <option value="alpha">
+                            Unauthenticated
+                        </option>
+                        <option value="bravo">
+                            Authenticated but Unverified
+                        </option>
+                        <option value="charlie">
+                            Verified
+                        </option>
+                    </usa-select>
+                </div>
+            </div>
+
+        </div>
+    </div> -->
+
+    <!-- Loading spinner -->
+    <div ng-if="c.loading" class="loading">
+        <div class="loading-wrapper">
+            <svg width="150" height="150" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25" />
+                <path d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z">
+                    <animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12" repeatCount="indefinite" />
+                </path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- CYHY Enrollment Landing -->
+    <div class="row mb-8">
+        <div class="col-md-12">
+            <!-- <div class="mb-8">
+                <div class="row">
+                    <div class="col-md-12">
+                        <usa-alert variant="error" role="alert" aria-live="assertive">
+                            <usa-alert-heading role="heading" aria-level="2">
+                                <strong>Warning!</strong>
+                            </usa-alert-heading>
+                            <usa-alert-text>
+                                <strong>This page is in development:</strong> Features currently displayed are not
+                                fully completed.
+                            </usa-alert-text>
+                        </usa-alert>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Inject template here -->
+            <div ng-include="'cyhy_landing'"></div>
+        </div>
+    </div>
+
+</div>

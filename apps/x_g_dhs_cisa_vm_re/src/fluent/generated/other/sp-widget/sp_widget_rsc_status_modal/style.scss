@@ -1,0 +1,204 @@
+.section-disabled {
+  color: #636363;
+}
+
+/* Padding */
+.p20-l {
+  padding-left: 20px;
+}
+
+.p20-r {
+  padding-right: 20px;
+}
+
+.p20-top {
+  padding-top: 20px;
+}
+
+.p20-bottom {
+  padding-bottom: 20px;
+}
+
+.p10-bottom {
+  padding-bottom: 10px;
+}
+
+.p10-top {
+  padding-top: 10px;
+}
+
+/* Overall Progress Section */
+.bg-custom-blue {
+  background: linear-gradient(80deg, #002B47 0%, #003E67 100%);
+}
+
+.title-text {
+  font-size: 2.5rem
+}
+
+.count-text {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.content-text {
+  font-size: 14px;
+}
+
+sup {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.progress {
+  height: 10px;
+}
+
+.progress-bar {
+  background-image: linear-gradient(to bottom, #85B063 0, #85B063 100%);
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+/* Collapsable Areas */
+/* Parent Section */
+.button-section {
+  border: none;
+  background: none;
+  padding: 0px;
+  text-align: left;
+}
+
+.selected-section {
+  background-color: #005288;
+  color: #fff;
+}
+
+.not-selected-section {
+  background-color: #DEDFE0;
+}
+
+.section-percent {
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  //margin-top: 10px;
+  text-align: left;
+}
+
+.section-title{
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  //margin-top: 10px;
+  margin-left:10px;
+  text-align: left;
+}
+
+.selected-section-title {
+  color: #fff;
+}
+
+.not-selected-section-title {
+  color: #005288;
+}
+
+.area-text {
+  margin-left:10px;
+  font-size: 14px;
+}
+
+//.fa-plus {
+//  color:#0078AE;
+//}
+
+.fa-check-circle {
+  color:#85B063;
+}
+
+.btn-custom {
+  width: 100%;
+  padding: 0px 0px 0px 0px !important;
+  border-radius: 0px !important;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.not-selected-btn {
+  background-color: #DEDFE0;
+  color: #005288;
+}
+
+.selected-btn {
+  background-color: #005288;
+  color: #ffffff;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-body {
+  background-color: #FCFDFD;
+  color: #005288;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 5px;  
+}
+
+.card-body-selected {
+  border-left: solid 5px #005288;
+  padding-left: 5px;
+  color: #0078AE;
+}
+
+.card-body-unselected {
+  border-left: none;
+  padding-left: 0px;
+}
+
+.section-area {
+  //padding-top: 10px;
+  // padding-bottom: 10px;
+  border-bottom: solid 1px #DEDFE0;
+  margin-left:10px;
+}
+
+.status-pill{
+  border-radius: 2px;
+  background-color:#85B063;
+  color: #FFF;
+  text-align: center;
+  font-family: Source Sans Pro;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.floating-container {
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.flex{
+  display:flex;
+}
+
+.max-height{
+  flex: 1;
+}
+
+.center{
+  align-content: center;
+  height: 100%;
+}

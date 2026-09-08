@@ -1,0 +1,44 @@
+.border-l {
+    padding-top: 40px;
+}
+@media (min-width: 768px) {
+    .border-l {
+        padding-top: 0px;
+        padding-left: 40px;
+        border-left: 1px solid rgb(223, 225, 226);
+    }
+}
+
+.btn-separator {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgb(223, 225, 226);
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    font-weight: bold;
+}
+
+.btn-separator span {
+    background: #fff;
+    padding: 0 10px;
+}
+
+h2 {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    color: #003E67;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.center {
+    text-align: center;
+}
+
+/* USWDS OVERRIDES */
+@media (min-width: 30em) {
+    .usa-button {
+        width: 100%;
+    }
+}

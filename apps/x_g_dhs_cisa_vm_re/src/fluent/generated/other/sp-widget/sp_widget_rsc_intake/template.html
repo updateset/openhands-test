@@ -1,0 +1,110 @@
+<div class="container-xxl container-mod">
+
+    <div id="rsc-intake-top" class="row pb-2"></div>
+
+    <div class="container-fluid" id="rsc-intake-container" tabindex="0">
+
+        <!-- Modal -->
+        <div ng-show="c.show_global_modal" class="modal fade" ng-class="{'in': c.show_global_modal}" tabindex="-1"
+            role="dialog" aria-labelledby="Additional Resources">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button role="button" class="close" ng-click="c.toggle_global_modal()" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Guidance</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div ng-include="c.global_modal_template"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+
+        <!-- Loading spinner -->
+        <div ng-if="c.loading" class="loading">
+            <div class="loading-wrapper"> <svg width="150" height="150" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"
+                        opacity=".25" />
+                    <path
+                        d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z">
+                        <animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12"
+                            repeatCount="indefinite" />
+                    </path>
+                </svg>
+            </div>
+        </div>
+
+        <div ng-include="c.nav.getTemplate()"></div>
+        <div ng-include="c.getFooter()"></div>
+
+        <div ng-if="c.evalSubmitFlag">
+            <form name="submitModal" novalidate>
+                <usa-modal id="force-modal" is-visible="c.evalSubmitFlag" aria-labelledby="force-modal-heading"
+                    aria-describedby="force-modal-description" variant="large" force-action="true">
+                    <usa-modal-header id="force-modal-heading">
+                        Want to Save Your Responses?
+                    </usa-modal-header>
+                    <usa-modal-body class="usa-prose modal-body">
+                        <div id="force-modal-description">
+
+                            <!-- Final nudge -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    Enter your organization email to save your responses and have them linked to your
+                                    organization. Then follow the steps on the next page or come back later and create
+                                    an
+                                    organization account using the same organization email to retrieve and track your
+                                    questionnaire results over time.
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <usa-label for="modal_customer_email">
+                                        <strong>Organization Email</strong>
+                                    </usa-label>
+                                    <usa-hint>
+                                        A valid email is required to save and submit your response
+                                    </usa-hint>
+
+                                    <!-- Validation -->
+                                    <div class="red" aria-atomic="true" role="alert">
+                                        <p class="mb-0"
+                                            ng-if="submitModal.modal_customer_email.$dirty && !submitModal.modal_customer_email.$valid">
+                                            Error - Email is invalid</p>
+                                    </div>
+
+                                    <usa-text-input id="modal_customer_email" name="modal_customer_email" type="email"
+                                        ng-model="c.rscForm.customer_email" ng-disabled="c.nav.isSummaryPage()">
+                                    </usa-text-input>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </usa-modal-body>
+                    <usa-modal-footer>
+                        <usa-button-group>
+                            <usa-button-group-item>
+                                <usa-button variant="primary" ng-click="c.submit()"
+                                    ng-disabled="c.rscForm.customer_email == '' || (!submitModal.modal_customer_email.$valid)">
+                                    Yes, save and submit
+                                </usa-button>
+                            </usa-button-group-item>
+                            <usa-button-group-item>
+                                <usa-button variant="outline" ng-click="c.submit(1)">
+                                    No, continue to summary
+                                </usa-button>
+                            </usa-button-group-item>
+                        </usa-button-group>
+                    </usa-modal-footer>
+                </usa-modal>
+            </form>
+        </div>
+
+    </div>
+</div>

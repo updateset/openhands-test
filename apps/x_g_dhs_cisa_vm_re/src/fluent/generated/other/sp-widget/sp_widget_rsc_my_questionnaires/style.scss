@@ -1,0 +1,139 @@
+/* // ---------------- GLOBAL ---------------- // */
+.ml-0 {
+  margin-left: 0px;
+}
+
+.template-container {
+  padding-bottom: 3rem;
+  background-color: #fff;
+  box-shadow: 0rem .8rem 3.6rem 0rem rgba(141, 141, 141, .1);
+}
+
+.template-form {
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+}
+
+.template-h1 {
+  font-weight: 600;
+  color: #005288;
+  padding-top: .8rem;
+  padding-bottom: .4rem;
+  margin-bottom: 0;
+}
+
+.template-h2 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.template-horizontal-line {
+  border: .1rem solid #7AA5C1;
+
+  &:before {
+    content: ' ';
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    left: 15px;
+
+    @media only screen and (min-width: 992px) {
+      top: 1.75rem;
+    }
+
+    @media only screen and (max-width: 991px) {
+      top: -.225rem;
+    }
+
+    border-radius: 2px;
+    border: 2px solid #7AA5C1;
+    background-color: #7AA5C1;
+  }
+
+  &:after {
+    content: ' ';
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    right: 15px;
+
+    @media only screen and (min-width: 992px) {
+      top: 1.75rem;
+    }
+
+    @media only screen and (max-width: 991px) {
+      top: -.225rem;
+    }
+
+    border-radius: 2px;
+    border: 2px solid #7AA5C1;
+    background-color: #7AA5C1;
+  }
+}
+
+.template-blue-box {
+  border-radius: .2rem;
+  border: .1rem solid #B8D9E8;
+  background: #F5FAFC;
+  padding: 2rem;
+}
+
+.template-footer-box {
+  border-radius: .2rem;
+  border: .1rem solid #B8D9E8;
+  background: #B8D9E8;
+  padding: 2rem;
+}
+
+.template-blue-border {
+  border-radius: .2rem;
+  border: .1rem solid #B8D9E8;
+}
+
+.footer-blue-container {
+  border-radius: 3px;
+  border: 1px solid #B8D9E8;
+  background: #F5FAFC;
+}
+
+.footer-statement {
+  font-size: 1.4rem;
+}
+
+
+/* // ---------------- USWDS Overrides ---------------- // */
+.usa-table {
+  width:100%;
+}
+
+.usa-table thead td, .usa-table thead th {
+  background-color: transparent;    
+}
+
+.usa-prose>table td, .usa-prose>table th, .usa-table td, .usa-table th {
+  border: 0;
+}
+
+.usa-table tr {    
+  border: 1px solid #DFE1E2;    
+}
+
+.usa-table thead tr {
+  height: 4rem; 
+}
+
+.usa-table tbody tr {
+  height: 5rem;
+}
+
+.usa-pagination {
+  justify-content: flex-start;
+}
+
+.usa-pagination__item {
+  height: 3.5rem;    
+  min-width: 3.5rem;
+}
